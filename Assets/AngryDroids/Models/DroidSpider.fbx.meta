@@ -1,0 +1,3984 @@
+fileFormatVersion: 2
+guid: da4dc340a92aae94ea2e6d5c80145bad
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Antennas
+  - first:
+      1: 100002
+    second: Circle01
+  - first:
+      1: 100004
+    second: Circle03
+  - first:
+      1: 100006
+    second: Circle04
+  - first:
+      1: 100008
+    second: Circle05
+  - first:
+      1: 100010
+    second: Droid
+  - first:
+      1: 100012
+    second: DroidControl
+  - first:
+      1: 100014
+    second: //RootNode
+  - first:
+      1: 100016
+    second: FloorHD_Head01
+  - first:
+      1: 100018
+    second: FloorHD_LaserGun01
+  - first:
+      1: 100020
+    second: FloorHD_LaserGun03
+  - first:
+      1: 100022
+    second: FootControl00
+  - first:
+      1: 100024
+    second: FootControl01
+  - first:
+      1: 100026
+    second: FootControl02
+  - first:
+      1: 100028
+    second: FootControl03
+  - first:
+      1: 100030
+    second: FootTilt00
+  - first:
+      1: 100032
+    second: FootTilt01
+  - first:
+      1: 100034
+    second: FootTilt02
+  - first:
+      1: 100036
+    second: FootTilt03
+  - first:
+      1: 100038
+    second: IK Chain01
+  - first:
+      1: 100040
+    second: IK Chain02
+  - first:
+      1: 100042
+    second: IK Chain03
+  - first:
+      1: 100044
+    second: IK Chain04
+  - first:
+      1: 100046
+    second: IK Chain05
+  - first:
+      1: 100048
+    second: IK Chain06
+  - first:
+      1: 100050
+    second: IK Chain07
+  - first:
+      1: 100052
+    second: IK Chain08
+  - first:
+      1: 100054
+    second: IK Chain09
+  - first:
+      1: 100056
+    second: IK Chain10
+  - first:
+      1: 100058
+    second: IK Chain11
+  - first:
+      1: 100060
+    second: IK Chain12
+  - first:
+      1: 100062
+    second: IK Chain13
+  - first:
+      1: 100064
+    second: IK Chain14
+  - first:
+      1: 100066
+    second: IK Chain15
+  - first:
+      1: 100068
+    second: IK Chain16
+  - first:
+      1: 100070
+    second: SpiderHD_Core
+  - first:
+      1: 100072
+    second: SpiderHD_LegFL_Foot
+  - first:
+      1: 100074
+    second: SpiderHD_LegFL_Foot01
+  - first:
+      1: 100076
+    second: SpiderHD_LegFL_Foot02
+  - first:
+      1: 100078
+    second: SpiderHD_LegFL_Foot03
+  - first:
+      1: 100080
+    second: SpiderHD_LegFL_Middle
+  - first:
+      1: 100082
+    second: SpiderHD_LegFL_Middle01
+  - first:
+      1: 100084
+    second: SpiderHD_LegFL_Middle02
+  - first:
+      1: 100086
+    second: SpiderHD_LegFL_Middle03
+  - first:
+      1: 100088
+    second: SpiderHD_LegFL_ShieldLower
+  - first:
+      1: 100090
+    second: SpiderHD_LegFL_ShieldLower01
+  - first:
+      1: 100092
+    second: SpiderHD_LegFL_ShieldLower02
+  - first:
+      1: 100094
+    second: SpiderHD_LegFL_ShieldLower03
+  - first:
+      1: 100096
+    second: SpiderHD_LegFL_ShieldUpper
+  - first:
+      1: 100098
+    second: SpiderHD_LegFL_ShieldUpper01
+  - first:
+      1: 100100
+    second: SpiderHD_LegFL_ShieldUpper02
+  - first:
+      1: 100102
+    second: SpiderHD_LegFL_ShieldUpper03
+  - first:
+      1: 100104
+    second: SpiderHD_LegFL_Toe00
+  - first:
+      1: 100106
+    second: SpiderHD_LegFL_Toe01
+  - first:
+      1: 100108
+    second: SpiderHD_LegFL_Toe02
+  - first:
+      1: 100110
+    second: SpiderHD_LegFL_Toe03
+  - first:
+      1: 100112
+    second: SpiderHD_LegFL_Upper
+  - first:
+      1: 100114
+    second: SpiderHD_LegFL_Upper01
+  - first:
+      1: 100116
+    second: SpiderHD_LegFL_Upper02
+  - first:
+      1: 100118
+    second: SpiderHD_LegFL_Upper03
+  - first:
+      1: 100120
+    second: LegControl00
+  - first:
+      1: 100122
+    second: LegControl01
+  - first:
+      1: 100124
+    second: LegControl02
+  - first:
+      1: 100126
+    second: LegControl03
+  - first:
+      1: 100128
+    second: LegFoldingControls
+  - first:
+      4: 400000
+    second: Antennas
+  - first:
+      4: 400002
+    second: Circle01
+  - first:
+      4: 400004
+    second: Circle03
+  - first:
+      4: 400006
+    second: Circle04
+  - first:
+      4: 400008
+    second: Circle05
+  - first:
+      4: 400010
+    second: Droid
+  - first:
+      4: 400012
+    second: DroidControl
+  - first:
+      4: 400014
+    second: //RootNode
+  - first:
+      4: 400016
+    second: FloorHD_Head01
+  - first:
+      4: 400018
+    second: FloorHD_LaserGun01
+  - first:
+      4: 400020
+    second: FloorHD_LaserGun03
+  - first:
+      4: 400022
+    second: FootControl00
+  - first:
+      4: 400024
+    second: FootControl01
+  - first:
+      4: 400026
+    second: FootControl02
+  - first:
+      4: 400028
+    second: FootControl03
+  - first:
+      4: 400030
+    second: FootTilt00
+  - first:
+      4: 400032
+    second: FootTilt01
+  - first:
+      4: 400034
+    second: FootTilt02
+  - first:
+      4: 400036
+    second: FootTilt03
+  - first:
+      4: 400038
+    second: IK Chain01
+  - first:
+      4: 400040
+    second: IK Chain02
+  - first:
+      4: 400042
+    second: IK Chain03
+  - first:
+      4: 400044
+    second: IK Chain04
+  - first:
+      4: 400046
+    second: IK Chain05
+  - first:
+      4: 400048
+    second: IK Chain06
+  - first:
+      4: 400050
+    second: IK Chain07
+  - first:
+      4: 400052
+    second: IK Chain08
+  - first:
+      4: 400054
+    second: IK Chain09
+  - first:
+      4: 400056
+    second: IK Chain10
+  - first:
+      4: 400058
+    second: IK Chain11
+  - first:
+      4: 400060
+    second: IK Chain12
+  - first:
+      4: 400062
+    second: IK Chain13
+  - first:
+      4: 400064
+    second: IK Chain14
+  - first:
+      4: 400066
+    second: IK Chain15
+  - first:
+      4: 400068
+    second: IK Chain16
+  - first:
+      4: 400070
+    second: SpiderHD_Core
+  - first:
+      4: 400072
+    second: SpiderHD_LegFL_Foot
+  - first:
+      4: 400074
+    second: SpiderHD_LegFL_Foot01
+  - first:
+      4: 400076
+    second: SpiderHD_LegFL_Foot02
+  - first:
+      4: 400078
+    second: SpiderHD_LegFL_Foot03
+  - first:
+      4: 400080
+    second: SpiderHD_LegFL_Middle
+  - first:
+      4: 400082
+    second: SpiderHD_LegFL_Middle01
+  - first:
+      4: 400084
+    second: SpiderHD_LegFL_Middle02
+  - first:
+      4: 400086
+    second: SpiderHD_LegFL_Middle03
+  - first:
+      4: 400088
+    second: SpiderHD_LegFL_ShieldLower
+  - first:
+      4: 400090
+    second: SpiderHD_LegFL_ShieldLower01
+  - first:
+      4: 400092
+    second: SpiderHD_LegFL_ShieldLower02
+  - first:
+      4: 400094
+    second: SpiderHD_LegFL_ShieldLower03
+  - first:
+      4: 400096
+    second: SpiderHD_LegFL_ShieldUpper
+  - first:
+      4: 400098
+    second: SpiderHD_LegFL_ShieldUpper01
+  - first:
+      4: 400100
+    second: SpiderHD_LegFL_ShieldUpper02
+  - first:
+      4: 400102
+    second: SpiderHD_LegFL_ShieldUpper03
+  - first:
+      4: 400104
+    second: SpiderHD_LegFL_Toe00
+  - first:
+      4: 400106
+    second: SpiderHD_LegFL_Toe01
+  - first:
+      4: 400108
+    second: SpiderHD_LegFL_Toe02
+  - first:
+      4: 400110
+    second: SpiderHD_LegFL_Toe03
+  - first:
+      4: 400112
+    second: SpiderHD_LegFL_Upper
+  - first:
+      4: 400114
+    second: SpiderHD_LegFL_Upper01
+  - first:
+      4: 400116
+    second: SpiderHD_LegFL_Upper02
+  - first:
+      4: 400118
+    second: SpiderHD_LegFL_Upper03
+  - first:
+      4: 400120
+    second: LegControl00
+  - first:
+      4: 400122
+    second: LegControl01
+  - first:
+      4: 400124
+    second: LegControl02
+  - first:
+      4: 400126
+    second: LegControl03
+  - first:
+      4: 400128
+    second: LegFoldingControls
+  - first:
+      23: 2300000
+    second: Antennas
+  - first:
+      23: 2300002
+    second: Circle01
+  - first:
+      23: 2300004
+    second: Circle03
+  - first:
+      23: 2300006
+    second: Circle04
+  - first:
+      23: 2300008
+    second: Circle05
+  - first:
+      23: 2300010
+    second: FloorHD_Head01
+  - first:
+      23: 2300012
+    second: FloorHD_LaserGun01
+  - first:
+      23: 2300014
+    second: FloorHD_LaserGun03
+  - first:
+      23: 2300016
+    second: FootControl00
+  - first:
+      23: 2300018
+    second: FootControl01
+  - first:
+      23: 2300020
+    second: FootControl02
+  - first:
+      23: 2300022
+    second: FootControl03
+  - first:
+      23: 2300024
+    second: FootTilt00
+  - first:
+      23: 2300026
+    second: FootTilt01
+  - first:
+      23: 2300028
+    second: FootTilt02
+  - first:
+      23: 2300030
+    second: FootTilt03
+  - first:
+      23: 2300032
+    second: SpiderHD_Core
+  - first:
+      23: 2300034
+    second: SpiderHD_LegFL_Foot
+  - first:
+      23: 2300036
+    second: SpiderHD_LegFL_Foot01
+  - first:
+      23: 2300038
+    second: SpiderHD_LegFL_Foot02
+  - first:
+      23: 2300040
+    second: SpiderHD_LegFL_Foot03
+  - first:
+      23: 2300042
+    second: SpiderHD_LegFL_Middle
+  - first:
+      23: 2300044
+    second: SpiderHD_LegFL_Middle01
+  - first:
+      23: 2300046
+    second: SpiderHD_LegFL_Middle02
+  - first:
+      23: 2300048
+    second: SpiderHD_LegFL_Middle03
+  - first:
+      23: 2300050
+    second: SpiderHD_LegFL_ShieldLower
+  - first:
+      23: 2300052
+    second: SpiderHD_LegFL_ShieldLower01
+  - first:
+      23: 2300054
+    second: SpiderHD_LegFL_ShieldLower02
+  - first:
+      23: 2300056
+    second: SpiderHD_LegFL_ShieldLower03
+  - first:
+      23: 2300058
+    second: SpiderHD_LegFL_ShieldUpper
+  - first:
+      23: 2300060
+    second: SpiderHD_LegFL_ShieldUpper01
+  - first:
+      23: 2300062
+    second: SpiderHD_LegFL_ShieldUpper02
+  - first:
+      23: 2300064
+    second: SpiderHD_LegFL_ShieldUpper03
+  - first:
+      23: 2300066
+    second: SpiderHD_LegFL_Upper
+  - first:
+      23: 2300068
+    second: SpiderHD_LegFL_Upper01
+  - first:
+      23: 2300070
+    second: SpiderHD_LegFL_Upper02
+  - first:
+      23: 2300072
+    second: SpiderHD_LegFL_Upper03
+  - first:
+      33: 3300000
+    second: Antennas
+  - first:
+      33: 3300002
+    second: Circle01
+  - first:
+      33: 3300004
+    second: Circle03
+  - first:
+      33: 3300006
+    second: Circle04
+  - first:
+      33: 3300008
+    second: Circle05
+  - first:
+      33: 3300010
+    second: FloorHD_Head01
+  - first:
+      33: 3300012
+    second: FloorHD_LaserGun01
+  - first:
+      33: 3300014
+    second: FloorHD_LaserGun03
+  - first:
+      33: 3300016
+    second: FootControl00
+  - first:
+      33: 3300018
+    second: FootControl01
+  - first:
+      33: 3300020
+    second: FootControl02
+  - first:
+      33: 3300022
+    second: FootControl03
+  - first:
+      33: 3300024
+    second: FootTilt00
+  - first:
+      33: 3300026
+    second: FootTilt01
+  - first:
+      33: 3300028
+    second: FootTilt02
+  - first:
+      33: 3300030
+    second: FootTilt03
+  - first:
+      33: 3300032
+    second: SpiderHD_Core
+  - first:
+      33: 3300034
+    second: SpiderHD_LegFL_Foot
+  - first:
+      33: 3300036
+    second: SpiderHD_LegFL_Foot01
+  - first:
+      33: 3300038
+    second: SpiderHD_LegFL_Foot02
+  - first:
+      33: 3300040
+    second: SpiderHD_LegFL_Foot03
+  - first:
+      33: 3300042
+    second: SpiderHD_LegFL_Middle
+  - first:
+      33: 3300044
+    second: SpiderHD_LegFL_Middle01
+  - first:
+      33: 3300046
+    second: SpiderHD_LegFL_Middle02
+  - first:
+      33: 3300048
+    second: SpiderHD_LegFL_Middle03
+  - first:
+      33: 3300050
+    second: SpiderHD_LegFL_ShieldLower
+  - first:
+      33: 3300052
+    second: SpiderHD_LegFL_ShieldLower01
+  - first:
+      33: 3300054
+    second: SpiderHD_LegFL_ShieldLower02
+  - first:
+      33: 3300056
+    second: SpiderHD_LegFL_ShieldLower03
+  - first:
+      33: 3300058
+    second: SpiderHD_LegFL_ShieldUpper
+  - first:
+      33: 3300060
+    second: SpiderHD_LegFL_ShieldUpper01
+  - first:
+      33: 3300062
+    second: SpiderHD_LegFL_ShieldUpper02
+  - first:
+      33: 3300064
+    second: SpiderHD_LegFL_ShieldUpper03
+  - first:
+      33: 3300066
+    second: SpiderHD_LegFL_Upper
+  - first:
+      33: 3300068
+    second: SpiderHD_LegFL_Upper01
+  - first:
+      33: 3300070
+    second: SpiderHD_LegFL_Upper02
+  - first:
+      33: 3300072
+    second: SpiderHD_LegFL_Upper03
+  - first:
+      43: 4300000
+    second: SpiderHD_Core
+  - first:
+      43: 4300002
+    second: SpiderHD_LegFL_Upper
+  - first:
+      43: 4300004
+    second: SpiderHD_LegFL_Middle
+  - first:
+      43: 4300006
+    second: SpiderHD_LegFL_ShieldUpper
+  - first:
+      43: 4300008
+    second: SpiderHD_LegFL_ShieldLower
+  - first:
+      43: 4300010
+    second: SpiderHD_LegFL_Foot
+  - first:
+      43: 4300012
+    second: SpiderHD_LegFL_Upper01
+  - first:
+      43: 4300014
+    second: SpiderHD_LegFL_Middle01
+  - first:
+      43: 4300016
+    second: SpiderHD_LegFL_ShieldUpper01
+  - first:
+      43: 4300018
+    second: SpiderHD_LegFL_ShieldLower01
+  - first:
+      43: 4300020
+    second: SpiderHD_LegFL_Foot01
+  - first:
+      43: 4300022
+    second: SpiderHD_LegFL_Upper02
+  - first:
+      43: 4300024
+    second: SpiderHD_LegFL_Middle02
+  - first:
+      43: 4300026
+    second: SpiderHD_LegFL_ShieldUpper02
+  - first:
+      43: 4300028
+    second: SpiderHD_LegFL_ShieldLower02
+  - first:
+      43: 4300030
+    second: SpiderHD_LegFL_Foot02
+  - first:
+      43: 4300032
+    second: SpiderHD_LegFL_Upper03
+  - first:
+      43: 4300034
+    second: SpiderHD_LegFL_Middle03
+  - first:
+      43: 4300036
+    second: SpiderHD_LegFL_ShieldUpper03
+  - first:
+      43: 4300038
+    second: SpiderHD_LegFL_ShieldLower03
+  - first:
+      43: 4300040
+    second: SpiderHD_LegFL_Foot03
+  - first:
+      43: 4300042
+    second: FloorHD_Head01
+  - first:
+      43: 4300044
+    second: FloorHD_LaserGun03
+  - first:
+      43: 4300046
+    second: FloorHD_LaserGun01
+  - first:
+      43: 4300048
+    second: Antennas
+  - first:
+      43: 4300050
+    second: FootControl03
+  - first:
+      43: 4300052
+    second: FootTilt03
+  - first:
+      43: 4300054
+    second: Circle05
+  - first:
+      43: 4300056
+    second: FootControl00
+  - first:
+      43: 4300058
+    second: FootTilt00
+  - first:
+      43: 4300060
+    second: Circle01
+  - first:
+      43: 4300062
+    second: FootControl01
+  - first:
+      43: 4300064
+    second: FootTilt01
+  - first:
+      43: 4300066
+    second: Circle03
+  - first:
+      43: 4300068
+    second: FootControl02
+  - first:
+      43: 4300070
+    second: FootTilt02
+  - first:
+      43: 4300072
+    second: Circle04
+  - first:
+      74: 7400000
+    second: walk_forward
+  - first:
+      74: 7400002
+    second: walk_back
+  - first:
+      74: 7400004
+    second: walk_left
+  - first:
+      74: 7400006
+    second: walk_right
+  - first:
+      74: 7400008
+    second: turn_left
+  - first:
+      74: 7400010
+    second: turn_right
+  - first:
+      74: 7400012
+    second: close
+  - first:
+      74: 7400014
+    second: closed
+  - first:
+      74: 7400016
+    second: open
+  - first:
+      74: 7400018
+    second: idle
+  - first:
+      74: 7400020
+    second: damage_front
+  - first:
+      74: 7400022
+    second: damage_back
+  - first:
+      74: 7400024
+    second: damage_left
+  - first:
+      74: 7400026
+    second: damage_right
+  - first:
+      74: 7400028
+    second: jump
+  - first:
+      74: 7400030
+    second: air
+  - first:
+      74: 7400032
+    second: landing
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      74: -8602865948963634117
+    second: fire_heavy
+  - first:
+      74: -8408837023907918128
+    second: fire_light
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.25
+    animationPositionError: 0.25
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk_forward
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 5
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk_back
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 40
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk_left
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 75
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk_right
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 110
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: turn_left
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 145
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: turn_right
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 180
+      lastFrame: 205
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: close
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 215
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: closed
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 240
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: open
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 250
+      lastFrame: 275
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 285
+      lastFrame: 340
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: damage_front
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 354
+      lastFrame: 355
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: damage_back
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 364
+      lastFrame: 365
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: damage_left
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 374
+      lastFrame: 375
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: damage_right
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 384
+      lastFrame: 385
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jump
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 400
+      lastFrame: 408
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.8283049
+        functionName: DoJump
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: air
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 414
+      lastFrame: 416
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: landing
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 422
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fire_heavy
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 350
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fire_light
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 350
+      lastFrame: 352
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/SpiderHD_Core
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+        weight: 1
+      - path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+        weight: 1
+      - path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+        weight: 1
+      - path: DroidControl
+        weight: 1
+      - path: DroidControl/FootControl00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/Circle01
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+        weight: 1
+      - path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+          Chain01
+        weight: 1
+      - path: DroidControl/FootControl01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/Circle03
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+        weight: 1
+      - path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+          Chain03
+        weight: 1
+      - path: DroidControl/FootControl02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/Circle04
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+        weight: 1
+      - path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+          Chain05
+        weight: 1
+      - path: DroidControl/FootControl03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/Circle05
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+        weight: 1
+      - path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+          Chain07
+        weight: 1
+      - path: DroidControl/LegFoldingControls
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl00
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl01
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl02
+        weight: 1
+      - path: DroidControl/LegFoldingControls/LegControl03
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

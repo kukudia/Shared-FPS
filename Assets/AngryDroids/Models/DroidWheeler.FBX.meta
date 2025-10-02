@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 294552997f1d4aa40abadd11dfd7e240
+timeCreated: 1427619246
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: DroidBody
+    100002: DroidWheel
+    100004: //RootNode
+    100006: DroidWheelLeft
+    100008: DroidWheelRight
+    100010: Head
+    100012: Antenna
+    100014: BodyLower
+    100016: BodyUpper
+    100018: DroidInnerParts
+    100020: HeadControl
+    100022: ShieldLowerL
+    100024: ShieldLowerR
+    100026: ShieldUpper
+    100028: WeaponAttachment
+    100030: Droid
+    400000: DroidBody
+    400002: DroidWheel
+    400004: //RootNode
+    400006: DroidWheelLeft
+    400008: DroidWheelRight
+    400010: Head
+    400012: Antenna
+    400014: BodyLower
+    400016: BodyUpper
+    400018: DroidInnerParts
+    400020: HeadControl
+    400022: ShieldLowerL
+    400024: ShieldLowerR
+    400026: ShieldUpper
+    400028: WeaponAttachment
+    400030: Droid
+    2300000: DroidBody
+    2300002: DroidWheelLeft
+    2300004: DroidWheelRight
+    2300006: Head
+    2300008: Antenna
+    2300010: BodyLower
+    2300012: BodyUpper
+    2300014: DroidInnerParts
+    2300016: HeadControl
+    2300018: ShieldLowerL
+    2300020: ShieldLowerR
+    2300022: ShieldUpper
+    2300024: WeaponAttachment
+    3300000: DroidBody
+    3300002: DroidWheelLeft
+    3300004: DroidWheelRight
+    3300006: Head
+    3300008: Antenna
+    3300010: BodyLower
+    3300012: BodyUpper
+    3300014: DroidInnerParts
+    3300016: HeadControl
+    3300018: ShieldLowerL
+    3300020: ShieldLowerR
+    3300022: ShieldUpper
+    3300024: WeaponAttachment
+    4300000: DroidWheelRight
+    4300002: DroidWheelLeft
+    4300004: DroidBody
+    4300006: Head
+    4300008: DroidInnerParts
+    4300010: ShieldLowerL
+    4300012: ShieldLowerR
+    4300014: ShieldUpper
+    4300016: BodyLower
+    4300018: BodyUpper
+    4300020: HeadControl
+    4300022: WeaponAttachment
+    4300024: Antenna
+    7400000: move_start
+    7400002: move_end
+    7400004: move_idle
+    7400006: move_turn_left
+    7400008: move_turn_right
+    7400010: idle
+    7400012: turn_left
+    7400014: turn_right
+    7400016: back_turn_left
+    7400018: back_turn_right
+    7400020: move_forward
+    7400022: move_backward
+    7400024: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move_turn_left
+      takeName: Take 001
+      firstFrame: 37
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: move_turn_right
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 45
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: turn_left
+      takeName: Take 001
+      firstFrame: 43
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: turn_right
+      takeName: Take 001
+      firstFrame: 46
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: back_turn_left
+      takeName: Take 001
+      firstFrame: 37
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: back_turn_right
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: move_forward
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: move_backward
+      takeName: Take 001
+      firstFrame: 21
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Droid
+        weight: 1
+      - path: Droid/DroidBody
+        weight: 1
+      - path: Droid/DroidBody/DroidInnerParts
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerL
+        weight: 1
+      - path: Droid/DroidBody/ShieldLowerR
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/Antenna
+        weight: 1
+      - path: Droid/DroidBody/ShieldUpper/BodyLower/BodyUpper/HeadControl/Head/WeaponAttachment
+        weight: 1
+      - path: Droid/DroidWheel
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelLeft
+        weight: 1
+      - path: Droid/DroidWheel/DroidWheelRight
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

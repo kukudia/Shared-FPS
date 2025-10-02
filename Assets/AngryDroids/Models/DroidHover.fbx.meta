@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: f88a2a07de973bb4aaf5e85c620f9975
+timeCreated: 1475095566
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: FloorHD_Base03
+    100004: FloorHD_Head02
+    100006: FloorHD_LaserGun04
+    100008: FloorHD_LaserGun05
+    100010: FloorHD_ShieldLeft01
+    100012: FloorHD_ShieldRight01
+    100014: Object
+    100016: Object10
+    100018: Object11
+    100020: Object12
+    100022: WheelerHD_Head01
+    100024: Object30
+    100026: Object31
+    100028: Antennas
+    100030: HoverHD_Head
+    100032: HoverHD_LaserGun00
+    100034: HoverHD_LaserGun01
+    100036: HoverHD_ShieldLower
+    100038: HoverHD_ShieldUpper
+    100040: HoverHD_Base
+    100042: DroidHover
+    100044: Object13
+    100046: Hover_glow
+    400000: //RootNode
+    400002: FloorHD_Base03
+    400004: FloorHD_Head02
+    400006: FloorHD_LaserGun04
+    400008: FloorHD_LaserGun05
+    400010: FloorHD_ShieldLeft01
+    400012: FloorHD_ShieldRight01
+    400014: Object
+    400016: Object10
+    400018: Object11
+    400020: Object12
+    400022: WheelerHD_Head01
+    400024: Object30
+    400026: Object31
+    400028: Antennas
+    400030: HoverHD_Head
+    400032: HoverHD_LaserGun00
+    400034: HoverHD_LaserGun01
+    400036: HoverHD_ShieldLower
+    400038: HoverHD_ShieldUpper
+    400040: HoverHD_Base
+    400042: DroidHover
+    400044: Object13
+    400046: Hover_glow
+    2300000: FloorHD_Base03
+    2300002: FloorHD_Head02
+    2300004: FloorHD_LaserGun04
+    2300006: FloorHD_LaserGun05
+    2300008: FloorHD_ShieldLeft01
+    2300010: FloorHD_ShieldRight01
+    2300012: Object
+    2300014: Object10
+    2300016: Object11
+    2300018: Object12
+    2300020: WheelerHD_Head01
+    2300022: Object30
+    2300024: Object31
+    2300026: Antennas
+    2300028: //RootNode
+    2300030: HoverHD_Head
+    2300032: HoverHD_LaserGun00
+    2300034: HoverHD_LaserGun01
+    2300036: HoverHD_ShieldLower
+    2300038: HoverHD_ShieldUpper
+    2300040: HoverHD_Base
+    2300042: Object13
+    2300044: Hover_glow
+    3300000: FloorHD_Base03
+    3300002: FloorHD_Head02
+    3300004: FloorHD_LaserGun04
+    3300006: FloorHD_LaserGun05
+    3300008: FloorHD_ShieldLeft01
+    3300010: FloorHD_ShieldRight01
+    3300012: Object
+    3300014: Object10
+    3300016: Object11
+    3300018: Object12
+    3300020: WheelerHD_Head01
+    3300022: Object30
+    3300024: Object31
+    3300026: Antennas
+    3300028: //RootNode
+    3300030: HoverHD_Head
+    3300032: HoverHD_LaserGun00
+    3300034: HoverHD_LaserGun01
+    3300036: HoverHD_ShieldLower
+    3300038: HoverHD_ShieldUpper
+    3300040: HoverHD_Base
+    3300042: Object13
+    3300044: Hover_glow
+    4300000: FloorHD_Head02
+    4300002: FloorHD_LaserGun05
+    4300004: FloorHD_LaserGun04
+    4300006: WheelerHD_Head01
+    4300008: FloorHD_ShieldRight01
+    4300010: FloorHD_ShieldLeft01
+    4300012: Object
+    4300014: Object10
+    4300016: FloorHD_Base03
+    4300018: Object11
+    4300020: Object12
+    4300022: Object30
+    4300024: Object31
+    4300026: HoverHD_Base
+    4300028: HoverHD_ShieldLower
+    4300030: HoverHD_Head
+    4300032: HoverHD_LaserGun01
+    4300034: HoverHD_LaserGun00
+    4300036: HoverHD_ShieldUpper
+    4300038: Antennas
+    4300040: Object13
+    4300042: Hover_glow
+    7400000: closed
+    7400002: open
+    7400004: idle
+    7400006: damage_front
+    7400008: damage_back
+    7400010: damage_left
+    7400012: damage_right
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: closed
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: open
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: damage_front
+      takeName: Take 001
+      firstFrame: 81
+      lastFrame: 83
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: damage_back
+      takeName: Take 001
+      firstFrame: 86
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: damage_left
+      takeName: Take 001
+      firstFrame: 91
+      lastFrame: 93
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: damage_right
+      takeName: Take 001
+      firstFrame: 96
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: DroidHover
+        weight: 1
+      - path: DroidHover/HoverHD_Base
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun00
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_Head/HoverHD_LaserGun01
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper
+        weight: 1
+      - path: DroidHover/HoverHD_Base/HoverHD_ShieldLower/HoverHD_ShieldUpper/Antennas
+        weight: 1
+      - path: Hover_glow
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

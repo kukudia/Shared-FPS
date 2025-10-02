@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: spider_weapon_mask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Droid
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/FloorHD_Head01
+    m_Weight: 0
+  - m_Path: Droid/SpiderHD_Core/FloorHD_Head01/Antennas
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/FloorHD_Head01/FloorHD_LaserGun03
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper/SpiderHD_LegFL_Middle/SpiderHD_LegFL_ShieldUpper/SpiderHD_LegFL_ShieldLower/SpiderHD_LegFL_Foot/SpiderHD_LegFL_Toe00
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper01/SpiderHD_LegFL_Middle01/SpiderHD_LegFL_ShieldUpper01/SpiderHD_LegFL_ShieldLower01/SpiderHD_LegFL_Foot01/SpiderHD_LegFL_Toe01
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper02/SpiderHD_LegFL_Middle02/SpiderHD_LegFL_ShieldUpper02/SpiderHD_LegFL_ShieldLower02/SpiderHD_LegFL_Foot02/SpiderHD_LegFL_Toe02
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03
+    m_Weight: 1
+  - m_Path: Droid/SpiderHD_Core/SpiderHD_LegFL_Upper03/SpiderHD_LegFL_Middle03/SpiderHD_LegFL_ShieldUpper03/SpiderHD_LegFL_ShieldLower03/SpiderHD_LegFL_Foot03/SpiderHD_LegFL_Toe03
+    m_Weight: 1
+  - m_Path: DroidControl
+    m_Weight: 0
+  - m_Path: DroidControl/FootControl00
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl00/FootTilt00
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl00/FootTilt00/IK Chain14
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl00/FootTilt00/IK Chain14/IK Chain02/IK Chain12/IK
+      Chain01
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl01
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl01/FootTilt01
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl01/FootTilt01/IK Chain15
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl01/FootTilt01/IK Chain15/IK Chain04/IK Chain09/IK
+      Chain03
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl02
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl02/FootTilt02
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl02/FootTilt02/IK Chain16
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl02/FootTilt02/IK Chain16/IK Chain06/IK Chain10/IK
+      Chain05
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl03
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl03/FootTilt03
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl03/FootTilt03/IK Chain13
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11
+    m_Weight: 1
+  - m_Path: DroidControl/FootControl03/FootTilt03/IK Chain13/IK Chain08/IK Chain11/IK
+      Chain07
+    m_Weight: 1
+  - m_Path: DroidControl/LegFoldingControls
+    m_Weight: 1
+  - m_Path: DroidControl/LegFoldingControls/LegControl00
+    m_Weight: 1
+  - m_Path: DroidControl/LegFoldingControls/LegControl01
+    m_Weight: 1
+  - m_Path: DroidControl/LegFoldingControls/LegControl02
+    m_Weight: 1
+  - m_Path: DroidControl/LegFoldingControls/LegControl03
+    m_Weight: 1
