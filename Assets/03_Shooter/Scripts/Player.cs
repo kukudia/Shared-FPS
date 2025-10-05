@@ -79,7 +79,9 @@ namespace Starter.Shooter
 		private int _visibleFireCount;
 		private int currentWeapon = 0;
 
-		private GameManager _gameManager;
+        private float lastRotationY;
+
+        private GameManager _gameManager;
 
 		public override void Spawned()
 		{
@@ -150,11 +152,14 @@ namespace Starter.Shooter
 
 		public override void Render()
 		{
-			if (HasStateAuthority)
+            float deltaAngle = (KCC.GetLookRotation(false, true).y - lastRotationY) / Time.deltaTime;
+            lastRotationY = KCC.GetLookRotation(false, true).y;
+
+            if (HasStateAuthority)
 			{
-				// Set look rotation for Render.
-				KCC.SetLookRotation(PlayerInput.CurrentInput.LookRotation, -90f, 90f);
-			}
+                Debug.Log(PlayerInput.CurrentInput.LookRotation);
+				KCC.SetLookRotation(PlayerInput.CurrentInput.LookRotation, -45f, 45f);
+            }
 
 			// Transform velocity vector to local space.
 			var moveSpeed = transform.InverseTransformVector(KCC.RealVelocity);
@@ -163,8 +168,9 @@ namespace Starter.Shooter
 			animator.SetFloat(_animIDSpeedZ, moveSpeed.z, 0.1f, Time.deltaTime);
 			animator.SetBool(_animIDGrounded, KCC.IsGrounded);
 			animator.SetFloat(_animIDPitch, KCC.GetLookRotation(true, false).x, 0.02f, Time.deltaTime);
+            animator.SetFloat("turn", deltaAngle, 0.1f, Time.deltaTime);
 
-			FootstepSound.enabled = KCC.IsGrounded && KCC.RealSpeed > 1f;
+            FootstepSound.enabled = KCC.IsGrounded && KCC.RealSpeed > 1f;
 			ScalingRoot.localScale = Vector3.Lerp(ScalingRoot.localScale, Vector3.one, Time.deltaTime * 8f);
 
 			var emission = DustParticles.emission;

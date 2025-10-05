@@ -123,7 +123,7 @@ namespace UnityEditor
             if (renderTo == null )
                 renderTo = new Texture2D(tex.width, tex.height, TextureFormat.RGBA32, true);
             else
-                renderTo.Resize(tex.width, tex.height);
+                renderTo.Reinitialize(tex.width, tex.height);
 
             //rendering diffuse
             //BakeTexture(tex, Diffuse, r, g, b, a, "Rendering Diffuse Map...");
