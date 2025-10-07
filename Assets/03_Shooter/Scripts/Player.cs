@@ -36,7 +36,11 @@ namespace Starter.Shooter
 		public float AirAcceleration = 25f;
 		public float AirDeceleration = 1.3f;
 
-		[Header("Fire Setup")]
+		[Header("CameraStable")]
+        public float baseSpeed = 2f;
+        public float multiplier = 1f;
+
+        [Header("Fire Setup")]
 		public LayerMask HitMask;
 		public GameObject ImpactPrefab;
 		public ParticleSystem MuzzleParticle;
@@ -203,15 +207,34 @@ namespace Starter.Shooter
 			ChestBone.position = Vector3.Lerp(ChestTargetPosition.position, ChestBone.position, blendAmount);
 			ChestBone.rotation = Quaternion.Lerp(ChestTargetPosition.rotation, ChestBone.rotation, blendAmount);
 
-			// Only local player needs to update the camera
-			if (HasStateAuthority)
+            SmoothCameraHandleRotation();
+
+            // Only local player needs to update the camera
+            if (HasStateAuthority)
 			{
 				// Transfer properties from camera handle to Main Camera.
 				Camera.main.transform.SetPositionAndRotation(CameraHandle.position, CameraHandle.rotation);
 			}
 		}
 
-		private void ProcessInput(GameplayInput input)
+        private void SmoothCameraHandleRotation()
+        {
+            // 当前旋转（包含动画的）
+            Quaternion current = CameraHandle.transform.rotation;
+
+            // 只保留 Y 轴角度
+            Vector3 euler = current.eulerAngles;
+            Quaternion target = Quaternion.Euler(euler.x, euler.y, 0);
+
+			float angleDiff = Quaternion.Angle(current, target);
+
+            float t = 1 - Mathf.Exp(-Time.deltaTime * (baseSpeed + angleDiff * multiplier));
+
+            // 插值回正（趋于水平）
+            CameraHandle.transform.rotation = Quaternion.Slerp(current, target, t);
+        }
+
+        private void ProcessInput(GameplayInput input)
 		{
 			KCC.SetLookRotation(input.LookRotation, -90f, 90f);
 
