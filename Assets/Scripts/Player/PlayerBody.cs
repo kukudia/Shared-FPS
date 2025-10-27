@@ -31,6 +31,8 @@ namespace Projectiles
 
 		public override void Spawned()
 		{
+			if (!_agent.gameStart) return;
+
 			_root.SetActive(_agent.Health.IsAlive);
 			_agent.Health.FatalHitTaken += OnFatalHit;
 

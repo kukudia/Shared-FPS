@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 435cd670228d8df43bcdc6287665a393
+  - enabled: 1
     path: Assets/Scenes/Deathmatch.unity
     guid: 4213cc4aa9415c94eb19e5e87b4316fb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Playground.unity
     guid: b69d812ebe04e1648908c67abb8fa11a
   m_configObjects: {}

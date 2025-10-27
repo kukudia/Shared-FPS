@@ -11,9 +11,6 @@ namespace Projectiles
 	[RequireComponent(typeof(Weapons), typeof(Health), typeof(SimpleKCC))]
 	public class PlayerAgent : ContextBehaviour
 	{
-		[Header("References")]
-		public Animator animator;
-
 		private float lastRotationY;
 
         [Networked]
@@ -25,34 +22,29 @@ namespace Projectiles
 
 		public bool        InputBlocked  => Health.IsAlive == false;
 
-		// PRIVATE MEMBERS
+        // PRIVATE MEMBERS
+        [SerializeField] private Animator animator;
+        [SerializeField] private Transform _cameraPivot;
+		[SerializeField] private Transform _cameraHandle;
 
-		[SerializeField]
-		private Transform _cameraPivot;
-		[SerializeField]
-		private Transform _cameraHandle;
+        [SerializeField] public float baseSpeed = 2f;
+        [SerializeField] public float multiplier = 1f;
 
-		[Header("Movement")]
-		[SerializeField]
-		private float _moveSpeed = 6f;
-		[SerializeField]
-		public float _upGravity = 15f;
-		[SerializeField]
-		public float _downGravity = 25f;
-		[SerializeField]
-		private float _maxCameraAngle = 75f;
-		[SerializeField]
-		private float _jumpImpulse = 6f;
-		[SerializeField]
-		public float _groundAcceleration = 55f;
-		[SerializeField]
-		public float _groundDeceleration = 25f;
-		[SerializeField]
-		public float _airAcceleration = 25f;
-		[SerializeField]
-		public float _airDeceleration = 1.3f;
+        [Header("Movement")]
+		[SerializeField] private float _moveSpeed = 6f;
+		[SerializeField] public float _upGravity = 15f;
+		[SerializeField] public float _downGravity = 25f;
+		[SerializeField] private float _maxCameraAngle = 75f;
+		[SerializeField] private float _jumpImpulse = 6f;
+		[SerializeField] public float _groundAcceleration = 55f;
+		[SerializeField] public float _groundDeceleration = 25f;
+		[SerializeField] public float _airAcceleration = 25f;
+		[SerializeField] public float _airDeceleration = 1.3f;
 
-		[Networked]
+		public bool gameStart = false;
+
+
+        [Networked]
 		private Vector3 _moveVelocity { get; set; }
 
 		private Vector2 _lastFUNLookRotation;
@@ -76,6 +68,8 @@ namespace Projectiles
 
 		public override void FixedUpdateNetwork()
 		{
+			if (!gameStart) return;
+
 			if (Owner != null && Health.IsAlive == true)
 			{
 				ProcessMovementInput();
@@ -105,7 +99,7 @@ namespace Projectiles
             animator.SetFloat("Horizontal", moveSpeed.x, 0.1f, Time.deltaTime);
             animator.SetFloat("Vertical", moveSpeed.z, 0.1f, Time.deltaTime);
             animator.SetFloat("Speed", currentSpeed, 0.1f, Time.deltaTime);
-            animator.SetBool("Grounded", KCC.IsGrounded);
+            animator.SetBool("Grounded", gameStart ? KCC.IsGrounded : true);
             animator.SetFloat("Pitch", KCC.GetLookRotation(true, false).x, 0.02f, Time.deltaTime);
             animator.SetFloat("Turn", deltaAngle, 0.1f, Time.deltaTime);
         }
@@ -122,6 +116,8 @@ namespace Projectiles
 
 		protected void LateUpdate()
 		{
+			if (!gameStart) return;
+
 			if (HasInputAuthority == true && Owner != null && Health.IsAlive == true)
 			{
 				// For responsive look experience we use last FUN look + accumulated look rotation delta
@@ -133,7 +129,9 @@ namespace Projectiles
 			var pitchRotation = KCC.GetLookRotation(true, false);
 			_cameraPivot.localRotation = Quaternion.Euler(pitchRotation);
 
-			if (HasInputAuthority == true)
+            SmoothCameraHandleRotation();
+
+            if (HasInputAuthority)
 			{
 				var cameraTransform = Context.Camera.transform;
 
@@ -143,9 +141,26 @@ namespace Projectiles
 			}
 		}
 
-		// PRIVATE METHODS
+        private void SmoothCameraHandleRotation()
+        {
+            // 当前旋转（包含动画的）
+            Quaternion current = _cameraHandle.transform.rotation;
 
-		private void ProcessMovementInput()
+            // 只保留 Y 轴角度
+            Vector3 euler = current.eulerAngles;
+            Quaternion target = Quaternion.Euler(0, euler.y, 0);
+
+            float angleDiff = Quaternion.Angle(current, target);
+
+            float t = 1 - Mathf.Exp(-Time.deltaTime * (baseSpeed + angleDiff * multiplier));
+
+            // 插值回正（趋于水平）
+            _cameraHandle.transform.rotation = Quaternion.Slerp(current, target, t);
+        }
+
+        // PRIVATE METHODS
+
+        private void ProcessMovementInput()
 		{
 			if (GetInput(out GameplayInput input) == false)
 				return;

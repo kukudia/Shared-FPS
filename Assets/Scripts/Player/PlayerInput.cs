@@ -84,7 +84,7 @@ namespace Projectiles
 			// This method is called BEFORE ANY FixedUpdateNetwork() and is used to accumulate input from Keyboard/Mouse.
 			// Input accumulation is mandatory - this method is called multiple times before new forward FixedUpdateNetwork() - common if rendering speed is faster than Fusion simulation.
 
-			if (HasInputAuthority == false)
+			if (HasInputAuthority == false || !_agent.gameStart)
 				return;
 
 			// Input is tracked only if the cursor is locked and runner should provide input

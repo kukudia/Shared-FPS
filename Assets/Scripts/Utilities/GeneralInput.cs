@@ -1,6 +1,7 @@
 ﻿using Fusion;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Projectiles.UI;
 
 namespace Projectiles
 {
@@ -14,7 +15,7 @@ namespace Projectiles
 		public bool IsLocked => Cursor.lockState == CursorLockMode.Locked;
 
 		// PRIVATE MEMBERS
-
+		private UIScreenEffects _uIScreenEffects;
 		private static int _lastSingleInputChange;
 		private static int _cursorLockRequests;
 
@@ -22,8 +23,8 @@ namespace Projectiles
 
 		public void RequestCursorLock()
 		{
-			// Static requests count is used for multi-peer setup
-			_cursorLockRequests++;
+            // Static requests count is used for multi-peer setup
+            _cursorLockRequests++;
 
 			if (_cursorLockRequests == 1)
 			{
@@ -48,8 +49,12 @@ namespace Projectiles
 
 		private void Update()
 		{
-			// Only one single input change per frame is possible (important for multi-peer multi-input game)
-			if (_lastSingleInputChange == Time.frameCount)
+            if (_uIScreenEffects == null)
+            {
+                _uIScreenEffects = FindFirstObjectByType<UIScreenEffects>();
+            }
+            // Only one single input change per frame is possible (important for multi-peer multi-input game)
+            if (_lastSingleInputChange == Time.frameCount)
 				return;
 
 			var keyboard = Keyboard.current;
@@ -89,7 +94,12 @@ namespace Projectiles
 			Cursor.lockState = value == true ? CursorLockMode.Locked : CursorLockMode.None;
 			Cursor.visible = !value;
 
-			//Debug.Log($"Cursor lock state {Cursor.lockState}, visibility {Cursor.visible}");
+			if (_uIScreenEffects != null)
+			{
+                _uIScreenEffects.OnPause(!value);
+            }
+
+			Debug.Log($"Cursor lock state {Cursor.lockState}, visibility {Cursor.visible}");
 		}
 
 		private void SetActiveRunner(int index)
