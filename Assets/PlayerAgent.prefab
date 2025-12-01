@@ -138,10 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9aadf52e5db44d9a13aabd0fe240948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4754003450274255827}
   _Owner: {fileID: 0}
+  animator: {fileID: 4754003450274255827}
   _cameraPivot: {fileID: 5401675310905547977}
   _cameraHandle: {fileID: 2117859135794692440}
+  baseSpeed: 2
+  multiplier: 1
   _moveSpeed: 6
   _upGravity: -18
   _downGravity: -25
@@ -151,6 +153,7 @@ MonoBehaviour:
   _groundDeceleration: 25
   _airAcceleration: 25
   _airDeceleration: 1.3
+  gameStart: 0
 --- !u!114 &8517683973242102361
 MonoBehaviour:
   m_ObjectHideFlags: 0

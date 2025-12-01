@@ -4,136 +4,151 @@ using UnityEngine;
 
 namespace Projectiles.UI
 {
-	/// <summary>
-	/// Shows all gameplay related information.
-	/// </summary>
-	public class UIGameplayView : UIBehaviour
-	{
-		// PRIVATE MEMBERS
+    /// <summary>
+    /// Shows all gameplay related information.
+    /// </summary>
+    public class UIGameplayView : UIBehaviour
+    {
+        // PRIVATE MEMBERS
 
-		[SerializeField]
-		private GameObject _observedAgentRoot;
-		[SerializeField]
-		private CanvasGroup _aliveGroup;
-		[SerializeField]
-		private float _aliveGroupFadeIn = 0.2f;
-		[SerializeField]
-		private float _aliveGroupFadeOut = 0.5f;
+        [SerializeField]
+        private GameObject _observedAgentRoot;
+        [SerializeField]
+        private CanvasGroup _aliveGroup;
+        [SerializeField]
+        private float _aliveGroupFadeIn = 0.2f;
+        [SerializeField]
+        private float _aliveGroupFadeOut = 0.5f;
 
-		private UICrosshair _crosshair;
-		private UIHitNumbers _hitNumbers;
-		private UIHealth _health;
-		private UIWeapons _weapons;
-		private UIScreenEffects _screenEffects;
+        private UICrosshair _crosshair;
+        private UIHitNumbers _hitNumbers;
+        private UIHealth _health;
+        private UIWeapons _weapons;
+        private UIScreenEffects _screenEffects;
 
-		private SceneContext _context;
-		private PlayerAgent _observedAgent;
-		private NetworkBehaviourId _observedAgentId;
+        private SceneContext _context;
+        private PlayerAgent _observedAgent;
+        private NetworkBehaviourId _observedAgentId;
 
-		private bool _aliveGroupVisible;
+        private bool _aliveGroupVisible;
 
-		// MONOBEHAVIOUR
+        // MONOBEHAVIOUR
 
-		protected void Awake()
-		{
-			ClearObservedAgent(true);
+        protected void Awake()
+        {
+            ClearObservedAgent(true);
 
-			_context = GameUI.Context;
+            _context = GameUI.Context;
 
-			_crosshair = GetComponentInChildren<UICrosshair>(true);
-			_hitNumbers = GetComponentInChildren<UIHitNumbers>(true);
-			_health = GetComponentInChildren<UIHealth>(true);
-			_weapons = GetComponentInChildren<UIWeapons>(true);
-			_screenEffects = GetComponentInChildren<UIScreenEffects>(true);
+            _crosshair = GetComponentInChildren<UICrosshair>(true);
+            _hitNumbers = GetComponentInChildren<UIHitNumbers>(true);
+            _health = GetComponentInChildren<UIHealth>(true);
+            _weapons = GetComponentInChildren<UIWeapons>(true);
+            _screenEffects = GetComponentInChildren<UIScreenEffects>(true);
 
-			_aliveGroup.alpha = 0f;
-		}
+            _aliveGroup.alpha = 0f;
+        }
 
-		protected void Update()
-		{
-			if (_context.Runner == null || _context.Runner.IsRunning == false)
-				return;
+        protected void Update()
+        {
+            // 检查 Runner 是否有效
+            if (_context == null || _context.Runner == null || _context.Runner.IsRunning == false)
+                return;
 
-			SetObservedAgent(_context.LocalAgent);
+            var localAgent = _context.LocalAgent;
 
-			if (_observedAgent == null)
-				return;
+            // 修复：添加空检查 - 玩家可能还没生成（刚加入房间时）
+            if (localAgent == null)
+            {
+                ClearObservedAgent(true);
+                return;
+            }
 
-			_health.UpdateHealth(_observedAgent.Health);
-			_weapons.UpdateWeapons(_observedAgent.Weapons);
-			_screenEffects.UpdateEffects(_observedAgent);
+            SetObservedAgent(localAgent);
 
-			ShowAliveGroup(_observedAgent.Health.IsAlive);
-		}
+            if (_observedAgent == null)
+                return;
 
-		// PRIVATE METHODS
+            _health.UpdateHealth(_observedAgent.Health);
+            _weapons.UpdateWeapons(_observedAgent.Weapons);
+            _screenEffects.UpdateEffects(_observedAgent);
 
-		private void ClearObservedAgent(bool hideElements)
-		{
-			if (_observedAgent != null)
-			{
-				_observedAgent.Health.HitPerformed -= OnHitPerformed;
-				_observedAgent.Health.HitTaken -= OnHitTaken;
+            ShowAliveGroup(_observedAgent.Health.IsAlive);
+        }
 
-				_observedAgent = null;
-				_observedAgentId = default;
-			}
+        // PRIVATE METHODS
 
-			if (hideElements == true)
-			{
-				_observedAgentRoot.SetActive(false);
-			}
-		}
+        private void ClearObservedAgent(bool hideElements)
+        {
+            if (_observedAgent != null)
+            {
+                _observedAgent.Health.HitPerformed -= OnHitPerformed;
+                _observedAgent.Health.HitTaken -= OnHitTaken;
 
-		private void SetObservedAgent(PlayerAgent agent, bool force = false)
-		{
-			if (agent == _observedAgent && agent.Id == _observedAgentId && force == false)
-				return;
+                _observedAgent = null;
+                _observedAgentId = default;
+            }
 
-			ClearObservedAgent(false);
+            if (hideElements == true)
+            {
+                _observedAgentRoot.SetActive(false);
+            }
+        }
 
-			// Same object can be reused from cache so storing NB Id is needed to detect
-			// that object was despawned and immediately spawned again
-			_observedAgentId = agent.Id;
-			_observedAgent = agent;
+        private void SetObservedAgent(PlayerAgent agent, bool force = false)
+        {
+            // 修复：先检查 agent 是否为 null，避免 NullReferenceException
+            if (agent == null)
+            {
+                ClearObservedAgent(true);
+                return;
+            }
 
-			if (agent != null)
-			{
-				agent.Health.HitPerformed += OnHitPerformed;
-				agent.Health.HitTaken += OnHitTaken;
-			}
+            // 现在可以安全地访问 agent.Id
+            if (agent == _observedAgent && agent.Id == _observedAgentId && force == false)
+                return;
 
-			_observedAgentRoot.SetActive(true);
-		}
+            ClearObservedAgent(false);
 
-		private void OnHitPerformed(HitData hitData)
-		{
-			_crosshair.HitPerformed(hitData);
-			_hitNumbers.HitPerformed(hitData);
-		}
+            // Same object can be reused from cache so storing NB Id is needed to detect
+            // that object was despawned and immediately spawned again
+            _observedAgentId = agent.Id;
+            _observedAgent = agent;
 
-		private void OnHitTaken(HitData hitData)
-		{
-			_screenEffects.OnHitTaken(hitData);
-		}
+            agent.Health.HitPerformed += OnHitPerformed;
+            agent.Health.HitTaken += OnHitTaken;
 
-		private void ShowAliveGroup(bool value, bool force = false)
-		{
-			if (value == _aliveGroupVisible && force == false)
-				return;
+            _observedAgentRoot.SetActive(true);
+        }
 
-			_aliveGroupVisible = value;
+        private void OnHitPerformed(HitData hitData)
+        {
+            _crosshair.HitPerformed(hitData);
+            _hitNumbers.HitPerformed(hitData);
+        }
 
-			DOTween.Kill(_aliveGroup);
+        private void OnHitTaken(HitData hitData)
+        {
+            _screenEffects.OnHitTaken(hitData);
+        }
 
-			if (value == true)
-			{
-				_aliveGroup.DOFade(1f, _aliveGroupFadeIn);
-			}
-			else
-			{
-				_aliveGroup.DOFade(0f, _aliveGroupFadeOut);
-			}
-		}
-	}
+        private void ShowAliveGroup(bool value, bool force = false)
+        {
+            if (value == _aliveGroupVisible && force == false)
+                return;
+
+            _aliveGroupVisible = value;
+
+            DOTween.Kill(_aliveGroup);
+
+            if (value == true)
+            {
+                _aliveGroup.DOFade(1f, _aliveGroupFadeIn);
+            }
+            else
+            {
+                _aliveGroup.DOFade(0f, _aliveGroupFadeOut);
+            }
+        }
+    }
 }

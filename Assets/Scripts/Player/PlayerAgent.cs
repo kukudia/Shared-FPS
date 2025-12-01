@@ -129,7 +129,7 @@ namespace Projectiles
 			var pitchRotation = KCC.GetLookRotation(true, false);
 			_cameraPivot.localRotation = Quaternion.Euler(pitchRotation);
 
-            SmoothCameraHandleRotation();
+            //SmoothCameraHandleRotation();
 
             if (HasInputAuthority)
 			{
