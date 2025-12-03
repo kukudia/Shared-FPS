@@ -62,8 +62,8 @@ namespace Projectiles
 			var networkEvents = Runner.GetComponent<NetworkEvents>();
 			networkEvents.OnInput.AddListener(OnInput);
 
-			Context.GeneralInput.RequestCursorLock();
-		}
+            Context.GeneralInput.RequestCursorLock();
+        }
 
 		public override void Despawned(NetworkRunner runner, bool hasState)
 		{

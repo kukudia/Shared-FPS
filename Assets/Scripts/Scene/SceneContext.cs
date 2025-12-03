@@ -22,5 +22,7 @@ namespace Projectiles
 		public NetworkRunner    Runner;
 		[HideInInspector]
 		public PlayerAgent      LocalAgent;
-	}
+
+        public ReadySystem ReadySystem { get; set; }
+    }
 }

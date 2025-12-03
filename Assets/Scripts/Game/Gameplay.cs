@@ -4,201 +4,236 @@ using UnityEngine;
 
 namespace Projectiles
 {
-	/// <summary>
-	/// Represents the actual gameplay loop. Handles PlayerAgent spawning and despawning for each Player that joins gameplay.
-	/// </summary>
-	public class Gameplay : ContextBehaviour
-	{
-		// PUBLIC MEMBERS
+    /// <summary>
+    /// Represents the actual gameplay loop. Handles PlayerAgent spawning and despawning for each Player that joins gameplay.
+    /// 【已修改】整合了准备系统
+    /// </summary>
+    public class Gameplay : ContextBehaviour
+    {
+        // PUBLIC MEMBERS
 
-		[Networked, Capacity(200)]
-		public NetworkDictionary<PlayerRef, Player> Players { get; }
+        [Networked, Capacity(200)]
+        public NetworkDictionary<PlayerRef, Player> Players { get; }
 
-		// PRIVATE METHODS
+        // PRIVATE METHODS
 
-		private SpawnPoint[] _spawnPoints;
-		private int _lastSpawnPoint = -1;
+        [Header("Ready System")]
+        [SerializeField] private ReadySystem readySystemPrefab;
 
-		private List<SpawnRequest> _spawnRequests = new();
+        private SpawnPoint[] _spawnPoints;
+        private int _lastSpawnPoint = -1;
 
-		// PUBLIC METHODS
+        private List<SpawnRequest> _spawnRequests = new();
+        private ReadySystem _readySystem;
 
-		public void Join(Player player)
-		{
-			if (HasStateAuthority == false)
-				return;
+        // PUBLIC METHODS
 
-			var playerRef = player.Object.InputAuthority;
+        public void Join(Player player)
+        {
+            if (HasStateAuthority == false)
+                return;
 
-			if (Players.ContainsKey(playerRef) == true)
-			{
-				Debug.LogError($"Player {playerRef} already joined");
-				return;
-			}
+            var playerRef = player.Object.InputAuthority;
 
-			Players.Add(playerRef, player);
+            if (Players.ContainsKey(playerRef) == true)
+            {
+                Debug.LogError($"Player {playerRef} already joined");
+                return;
+            }
 
-			OnPlayerJoined(player);
-		}
+            Players.Add(playerRef, player);
 
-		public void Leave(Player player)
-		{
-			if (HasStateAuthority == false)
-				return;
+            OnPlayerJoined(player);
+        }
 
-			if (Players.ContainsKey(player.Object.InputAuthority) == false)
-				return;
+        public void Leave(Player player)
+        {
+            if (HasStateAuthority == false)
+                return;
 
-			Players.Remove(player.Object.InputAuthority);
+            if (Players.ContainsKey(player.Object.InputAuthority) == false)
+                return;
 
-			OnPlayerLeft(player);
-		}
+            var playerRef = player.Object.InputAuthority;
+            Players.Remove(playerRef);
 
-		// NetworkBehaviour INTERFACE
+            // 通知准备系统玩家离开
+            if (_readySystem != null)
+            {
+                _readySystem.OnPlayerLeft(playerRef);
+            }
 
-		public override void Spawned()
-		{
-			// Register to context
-			Context.Gameplay = this;
-		}
+            OnPlayerLeft(player);
+        }
 
-		public override void FixedUpdateNetwork()
-		{
-			if (HasStateAuthority == false)
-				return;
+        // NetworkBehaviour INTERFACE
 
-			int currentTick = Runner.Tick;
+        public override void Spawned()
+        {
+            // Register to context
+            Context.Gameplay = this;
 
-			for (int i = _spawnRequests.Count - 1; i >= 0; i--)
-			{
-				var request = _spawnRequests[i];
+            // 生成准备系统（仅服务器）
+            if (HasStateAuthority && readySystemPrefab != null)
+            {
+                _readySystem = Runner.Spawn(readySystemPrefab);
+                Debug.Log("[Gameplay] ReadySystem spawned");
+            }
+        }
 
-				if (request.Tick > currentTick)
-					continue;
+        public override void FixedUpdateNetwork()
+        {
+            if (HasStateAuthority == false)
+                return;
 
-				_spawnRequests.RemoveAt(i);
+            int currentTick = Runner.Tick;
 
-				if (request.Player == null || request.Player.Object == null)
-					continue; // Player no longer valid
+            for (int i = _spawnRequests.Count - 1; i >= 0; i--)
+            {
+                var request = _spawnRequests[i];
 
-				if (Players.ContainsKey(request.Player.Object.InputAuthority) == false)
-					continue; // Player left gameplay
+                if (request.Tick > currentTick)
+                    continue;
 
-				SpawnPlayerAgent(request.Player);
-			}
-		}
+                _spawnRequests.RemoveAt(i);
 
-		public override void Despawned(NetworkRunner runner, bool hasState)
-		{
-			// Clear from context
-			Context.Gameplay = null;
-		}
+                if (request.Player == null || request.Player.Object == null)
+                    continue; // Player no longer valid
 
-		// PROTECTED METHODS
+                if (Players.ContainsKey(request.Player.Object.InputAuthority) == false)
+                    continue; // Player left gameplay
 
-		protected virtual void OnPlayerJoined(Player player)
-		{
-			SpawnPlayerAgent(player);
-		}
+                SpawnPlayerAgent(request.Player);
+            }
+        }
 
-		protected virtual void OnPlayerLeft(Player player)
-		{
-			DespawnPlayerAgent(player);
-		}
+        public override void Despawned(NetworkRunner runner, bool hasState)
+        {
+            // Clear from context
+            Context.Gameplay = null;
 
-		protected virtual void OnPlayerDeath(Player player)
-		{
-			AddSpawnRequest(player, 3f);
-		}
+            // 清理准备系统
+            if (_readySystem != null && HasStateAuthority)
+            {
+                Runner.Despawn(_readySystem.Object);
+                _readySystem = null;
+            }
+        }
 
-		protected virtual void OnPlayerAgentSpawned(PlayerAgent agent)
-		{
-			agent.Health.SetImmortality(3f);
-		}
+        // PROTECTED METHODS
 
-		protected virtual void OnPlayerAgentDespawned(PlayerAgent agent)
-		{
-		}
+        protected virtual void OnPlayerJoined(Player player)
+        {
+            SpawnPlayerAgent(player);
+        }
 
-		protected void SpawnPlayerAgent(Player player)
-		{
-			DespawnPlayerAgent(player);
+        protected virtual void OnPlayerLeft(Player player)
+        {
+            DespawnPlayerAgent(player);
+        }
 
-			var agent = SpawnAgent(player.Object.InputAuthority, player.AgentPrefab) as PlayerAgent;
-			player.AssignAgent(agent);
+        protected virtual void OnPlayerDeath(Player player)
+        {
+            AddSpawnRequest(player, 3f);
+        }
 
-			agent.Health.FatalHitTaken += OnFatalHitTaken;
+        protected virtual void OnPlayerAgentSpawned(PlayerAgent agent)
+        {
+            agent.Health.SetImmortality(3f);
 
-			OnPlayerAgentSpawned(agent);
-		}
+            // 默认gameStart为false，等待准备系统启动
+            agent.gameStart = false;
 
-		protected void DespawnPlayerAgent(Player player)
-		{
-			if (player.ActiveAgent == null)
-				return;
+            // 如果游戏已经开始，直接设置为true
+            if (Context.ReadySystem != null && Context.ReadySystem.GameStarted)
+            {
+                agent.gameStart = true;
+            }
+        }
 
-			player.ActiveAgent.Health.FatalHitTaken -= OnFatalHitTaken;
+        protected virtual void OnPlayerAgentDespawned(PlayerAgent agent)
+        {
+        }
 
-			OnPlayerAgentDespawned(player.ActiveAgent);
+        protected void SpawnPlayerAgent(Player player)
+        {
+            DespawnPlayerAgent(player);
 
-			DespawnAgent(player.ActiveAgent);
-			player.ClearAgent();
-		}
+            var agent = SpawnAgent(player.Object.InputAuthority, player.AgentPrefab) as PlayerAgent;
+            player.AssignAgent(agent);
 
-		protected void AddSpawnRequest(Player player, float spawnDelay)
-		{
-			int delayTicks = Mathf.RoundToInt(Runner.TickRate * spawnDelay);
+            agent.Health.FatalHitTaken += OnFatalHitTaken;
 
-			_spawnRequests.Add(new SpawnRequest()
-			{
-				Player = player,
-				Tick = Runner.Tick + delayTicks,
-			});
-		}
+            OnPlayerAgentSpawned(agent);
+        }
 
-		// PRIVATE METHODS
+        protected void DespawnPlayerAgent(Player player)
+        {
+            if (player.ActiveAgent == null)
+                return;
 
-		private void OnFatalHitTaken(HitData hitData)
-		{
-			var health = hitData.Target as Health;
+            player.ActiveAgent.Health.FatalHitTaken -= OnFatalHitTaken;
 
-			if (health == null)
-				return;
+            OnPlayerAgentDespawned(player.ActiveAgent);
 
-			if (Players.TryGet(health.Object.InputAuthority, out Player player) == true)
-			{
-				OnPlayerDeath(player);
-			}
-		}
+            DespawnAgent(player.ActiveAgent);
+            player.ClearAgent();
+        }
 
-		private PlayerAgent SpawnAgent(PlayerRef inputAuthority, PlayerAgent agentPrefab)
-		{
-			if (_spawnPoints == null)
-			{
-				_spawnPoints = Runner.SimulationUnityScene.FindObjectsOfTypeInOrder<SpawnPoint>(false);
-			}
+        protected void AddSpawnRequest(Player player, float spawnDelay)
+        {
+            int delayTicks = Mathf.RoundToInt(Runner.TickRate * spawnDelay);
 
-			_lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPoints.Length;
-			var spawnPoint = _spawnPoints[_lastSpawnPoint].transform;
+            _spawnRequests.Add(new SpawnRequest()
+            {
+                Player = player,
+                Tick = Runner.Tick + delayTicks,
+            });
+        }
 
-			var agent = Runner.Spawn(agentPrefab, spawnPoint.position, spawnPoint.rotation, inputAuthority);
-			return agent;
-		}
+        // PRIVATE METHODS
 
-		private void DespawnAgent(PlayerAgent agent)
-		{
-			if (agent == null)
-				return;
+        private void OnFatalHitTaken(HitData hitData)
+        {
+            var health = hitData.Target as Health;
 
-			Runner.Despawn(agent.Object);
-		}
+            if (health == null)
+                return;
 
-		// HELPERS
+            if (Players.TryGet(health.Object.InputAuthority, out Player player) == true)
+            {
+                OnPlayerDeath(player);
+            }
+        }
 
-		public struct SpawnRequest
-		{
-			public Player Player;
-			public int Tick;
-		}
-	}
+        private PlayerAgent SpawnAgent(PlayerRef inputAuthority, PlayerAgent agentPrefab)
+        {
+            if (_spawnPoints == null)
+            {
+                _spawnPoints = Runner.SimulationUnityScene.FindObjectsOfTypeInOrder<SpawnPoint>(false);
+            }
+
+            _lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPoints.Length;
+            var spawnPoint = _spawnPoints[_lastSpawnPoint].transform;
+
+            var agent = Runner.Spawn(agentPrefab, spawnPoint.position, spawnPoint.rotation, inputAuthority);
+            return agent;
+        }
+
+        private void DespawnAgent(PlayerAgent agent)
+        {
+            if (agent == null)
+                return;
+
+            Runner.Despawn(agent.Object);
+        }
+
+        // HELPERS
+
+        public struct SpawnRequest
+        {
+            public Player Player;
+            public int Tick;
+        }
+    }
 }

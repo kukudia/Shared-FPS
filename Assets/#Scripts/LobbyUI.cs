@@ -1,4 +1,4 @@
-namespace Fusion
+ï»¿namespace Fusion
 {
     using System;
     using System.Collections.Generic;
@@ -8,10 +8,10 @@ namespace Fusion
     using Fusion.Sockets;
 
     /// <summary>
-    /// ´óÌüUIÏµÍ³ - Ìæ´úFusionBootstrapDebugGUI
-    /// ¹¦ÄÜ£ºÊäÈëêÇ³Æ¡¢´´½¨·¿¼ä¡¢²é¿´·¿¼äÁĞ±í¡¢¼ÓÈë·¿¼ä¡¢Ë¢ĞÂÁĞ±í
+    /// å¤§å…UIç³»ç»Ÿ - æ›¿ä»£FusionBootstrapDebugGUI
+    /// åŠŸèƒ½ï¼šè¾“å…¥æ˜µç§°ã€åˆ›å»ºæˆ¿é—´ã€æŸ¥çœ‹æˆ¿é—´åˆ—è¡¨ã€åŠ å…¥æˆ¿é—´ã€åˆ·æ–°åˆ—è¡¨
     /// 
-    /// ¡¾ĞŞ¸´°æ±¾ v2¡¿Ìí¼Óµ÷ÊÔÈÕÖ¾£¬ĞŞ¸´µã»÷·¿¼äÎŞ·¨¼ÓÈëµÄÎÊÌâ
+    /// ã€ä¿®å¤ç‰ˆæœ¬ v2ã€‘æ·»åŠ è°ƒè¯•æ—¥å¿—ï¼Œä¿®å¤ç‚¹å‡»æˆ¿é—´æ— æ³•åŠ å…¥çš„é—®é¢˜
     /// </summary>
     [RequireComponent(typeof(FusionBootstrap))]
     public class FusionLobbyUI : MonoBehaviour, INetworkRunnerCallbacks
@@ -51,7 +51,7 @@ namespace Fusion
         private bool _isConnectingToLobby;
         private bool _isJoiningGame;
 
-        // ¾²Ì¬±äÁ¿ÓÃÓÚ¿ç³¡¾°´«µİÍæ¼ÒêÇ³Æ
+        // é™æ€å˜é‡ç”¨äºè·¨åœºæ™¯ä¼ é€’ç©å®¶æ˜µç§°
         public static string PlayerNickname { get; private set; }
 
         #region Unity Lifecycle
@@ -60,18 +60,18 @@ namespace Fusion
         {
             _bootstrap = GetComponent<FusionBootstrap>();
 
-            // ½ûÓÃÔ­À´µÄDebugGUI
+            // ç¦ç”¨åŸæ¥çš„DebugGUI
             var debugGUI = GetComponent<FusionBootstrapDebugGUI>();
             if (debugGUI != null)
             {
                 debugGUI.enabled = false;
                 debugGUI.useGUI = false;
-                DebugLog("ÒÑ½ûÓÃ FusionBootstrapDebugGUI");
+                DebugLog("Disabled FusionBootstrapDebugGUI");
             }
 
-            // ÉèÖÃ FusionBootstrap ÎªÊÖ¶¯Ä£Ê½
+            // è®¾ç½® FusionBootstrap ä¸ºæ‰‹åŠ¨æ¨¡å¼
             _bootstrap.StartMode = FusionBootstrap.StartModes.Manual;
-            DebugLog("FusionBootstrap ÉèÖÃÎª Manual Ä£Ê½");
+            DebugLog("FusionBootstrap set to Manual mode");
         }
 
         private void Start()
@@ -83,7 +83,7 @@ namespace Fusion
 
         private void Update()
         {
-            // ×Ô¶¯Ë¢ĞÂ
+            // è‡ªåŠ¨åˆ·æ–°
             if (_lobbyRunner != null && !_isJoiningGame && Time.time - _lastRefreshTime > autoRefreshInterval)
             {
                 _lastRefreshTime = Time.time;
@@ -104,17 +104,17 @@ namespace Fusion
             if (createRoomButton != null)
             {
                 createRoomButton.onClick.AddListener(OnCreateRoomClicked);
-                DebugLog("ÒÑ°ó¶¨´´½¨·¿¼ä°´Å¥");
+                DebugLog("The 'Create Room' button has been bound.");
             }
             else
             {
-                DebugLog("¾¯¸æ: createRoomButton Î´·ÖÅä!", true);
+                DebugLog("Warning: createRoomButton not allocated!", true);
             }
 
             if (refreshButton != null)
             {
                 refreshButton.onClick.AddListener(OnRefreshClicked);
-                DebugLog("ÒÑ°ó¶¨Ë¢ĞÂ°´Å¥");
+                DebugLog("Refresh button has been bound");
             }
         }
 
@@ -123,8 +123,8 @@ namespace Fusion
             if (lobbyPanel != null)
                 lobbyPanel.SetActive(true);
 
-            _isJoiningGame = false;  // ÖØÖÃ×´Ì¬
-            SetStatus("ÇëÊäÈëêÇ³Æ£¬È»ºó´´½¨»ò¼ÓÈë·¿¼ä");
+            _isJoiningGame = false;  // é‡ç½®çŠ¶æ€
+            SetStatus("Please enter your nickname, then create or join a room.");
         }
 
         private void HideLobby()
@@ -141,19 +141,19 @@ namespace Fusion
         {
             if (_isConnectingToLobby || _lobbyRunner != null)
             {
-                DebugLog("ÒÑ¾­ÔÚÁ¬½Ó´óÌü»òÒÑÁ¬½Ó");
+                DebugLog("Already in the connection lobby or connected");
                 return;
             }
 
             _isConnectingToLobby = true;
-            SetStatus("ÕıÔÚÁ¬½Ó´óÌü...");
+            SetStatus("Connecting to the lobby...");
             ShowLoading(true);
 
             var lobbyRunnerGO = new GameObject("LobbyRunner_ForRoomList");
             _lobbyRunner = lobbyRunnerGO.AddComponent<NetworkRunner>();
             _lobbyRunner.AddCallbacks(this);
 
-            DebugLog("ÕıÔÚÁ¬½Ó SessionLobby...");
+            DebugLog("Connecting to SessionLobby...");
 
             var result = await _lobbyRunner.JoinSessionLobby(SessionLobby.ClientServer);
 
@@ -162,13 +162,13 @@ namespace Fusion
 
             if (result.Ok)
             {
-                SetStatus("ÒÑÁ¬½Ó´óÌü£¬µÈ´ı·¿¼äÁĞ±í...");
-                DebugLog("´óÌüÁ¬½Ó³É¹¦");
+                SetStatus("Connected to lobby, awaiting room list...");
+                DebugLog("The lobby has connected successfully.");
             }
             else
             {
-                SetStatus($"Á¬½Ó´óÌüÊ§°Ü: {result.ShutdownReason}");
-                DebugLog($"´óÌüÁ¬½ÓÊ§°Ü: {result.ShutdownReason}", true);
+                SetStatus($"Failed to connect to the lobby: {result.ShutdownReason}");
+                DebugLog($"Failed to connect to the lobby: {result.ShutdownReason}", true);
                 DisconnectFromLobby();
             }
         }
@@ -177,7 +177,7 @@ namespace Fusion
         {
             if (_lobbyRunner != null)
             {
-                DebugLog("ÕıÔÚ¶Ï¿ª´óÌüÁ¬½Ó...");
+                DebugLog("Disconnecting from the lobby...");
                 _lobbyRunner.RemoveCallbacks(this);
                 _lobbyRunner.Shutdown();
 
@@ -194,7 +194,7 @@ namespace Fusion
 
         private void UpdateRoomListUI()
         {
-            // Çå³ıÏÖÓĞµÄ·¿¼äÏî
+            // æ¸…é™¤ç°æœ‰çš„æˆ¿é—´é¡¹
             foreach (var item in _roomItemInstances)
             {
                 if (item != null) Destroy(item);
@@ -203,11 +203,11 @@ namespace Fusion
 
             if (_sessionList.Count == 0)
             {
-                SetStatus("ÔİÎŞ·¿¼ä£¬Çë´´½¨Ò»¸öĞÂ·¿¼ä");
+                SetStatus("No rooms available. Please create a new room.");
                 return;
             }
 
-            SetStatus($"ÕÒµ½ {_sessionList.Count} ¸ö·¿¼ä (µã»÷¼ÓÈë)");
+            SetStatus($"Found {_sessionList.Count} rooms (click to join)");
 
             foreach (var session in _sessionList)
             {
@@ -217,19 +217,19 @@ namespace Fusion
 
         private void CreateRoomListItem(SessionInfo session)
         {
-            DebugLog($"´´½¨·¿¼äÁĞ±íÏî: {session.Name}");
+            DebugLog($"Create room list item: {session.Name}");
 
-            // Èç¹ûÃ»ÓĞ Prefab£¬´´½¨Ò»¸ö¼òµ¥µÄ°´Å¥
+            // å¦‚æœæ²¡æœ‰ Prefabï¼Œåˆ›å»ºä¸€ä¸ªç®€å•çš„æŒ‰é’®
             if (roomItemPrefab == null)
             {
-                DebugLog("roomItemPrefab Î´·ÖÅä£¬´´½¨¼òµ¥°´Å¥", true);
+                DebugLog("roomItemPrefab not assigned, create simple button", true);
                 CreateSimpleRoomButton(session);
                 return;
             }
 
             if (roomListContent == null)
             {
-                DebugLog("roomListContent Î´·ÖÅä!", true);
+                DebugLog("roomListContent Unassigned!", true);
                 return;
             }
 
@@ -240,11 +240,11 @@ namespace Fusion
             if (roomListItem != null)
             {
                 roomListItem.Setup(session, OnRoomItemClicked);
-                DebugLog($"·¿¼ä {session.Name} Ê¹ÓÃ RoomListItem ×é¼ş");
+                DebugLog($"Room {session.Name} using the RoomListItem component");
             }
             else
             {
-                // ±¸ÓÃ·½°¸£ºÖ±½ÓÉèÖÃ
+                // å¤‡ç”¨æ–¹æ¡ˆï¼šç›´æ¥è®¾ç½®
                 var texts = item.GetComponentsInChildren<TMP_Text>();
                 if (texts.Length > 0)
                 {
@@ -254,34 +254,34 @@ namespace Fusion
                 var button = item.GetComponentInChildren<Button>();
                 if (button != null)
                 {
-                    // ¡¾¹Ø¼ü¡¿±ØĞëÓÃ¾Ö²¿±äÁ¿²¶»ñ session
+                    // ã€å…³é”®ã€‘å¿…é¡»ç”¨å±€éƒ¨å˜é‡æ•è· session
                     string roomName = session.Name;
                     button.onClick.RemoveAllListeners();
                     button.onClick.AddListener(() => {
-                        DebugLog($"µã»÷ÁË·¿¼ä°´Å¥: {roomName}");
+                        DebugLog($"clicked the room button: {roomName}");
                         OnRoomItemClickedByName(roomName);
                     });
-                    DebugLog($"·¿¼ä {session.Name} °´Å¥ÒÑ°ó¶¨µã»÷ÊÂ¼ş");
+                    DebugLog($"The button for room {session.Name} has been bound to a click event.");
                 }
                 else
                 {
-                    DebugLog($"·¿¼ä {session.Name} µÄ Prefab ÖĞÃ»ÓĞ Button ×é¼ş!", true);
+                    DebugLog($"The room {session.Name} does not contain a Button component in its Prefab!", true);
                 }
             }
         }
 
         /// <summary>
-        /// Èç¹ûÃ»ÓĞÉèÖÃ Prefab£¬´´½¨¼òµ¥µÄ°´Å¥
+        /// å¦‚æœæ²¡æœ‰è®¾ç½® Prefabï¼Œåˆ›å»ºç®€å•çš„æŒ‰é’®
         /// </summary>
         private void CreateSimpleRoomButton(SessionInfo session)
         {
             if (roomListContent == null)
             {
-                Debug.Log($"[Lobby] ·¿¼ä: {session.Name} - {session.PlayerCount}/{session.MaxPlayers} (ÎŞ·¨ÏÔÊ¾UI)");
+                Debug.Log($"[Lobby] Room: {session.Name} - {session.PlayerCount}/{session.MaxPlayers} (Unable to display UI)");
                 return;
             }
 
-            // ´´½¨Ò»¸ö¼òµ¥µÄ°´Å¥ GameObject
+            // åˆ›å»ºä¸€ä¸ªç®€å•çš„æŒ‰é’® GameObject
             var buttonGO = new GameObject($"Room_{session.Name}");
             buttonGO.transform.SetParent(roomListContent, false);
 
@@ -294,7 +294,7 @@ namespace Fusion
             var button = buttonGO.AddComponent<Button>();
             button.targetGraphic = image;
 
-            // ÎÄ±¾
+            // æ–‡æœ¬
             var textGO = new GameObject("Text");
             textGO.transform.SetParent(buttonGO.transform, false);
             var textRect = textGO.AddComponent<RectTransform>();
@@ -309,15 +309,15 @@ namespace Fusion
             text.alignment = TextAlignmentOptions.Center;
             text.color = Color.white;
 
-            // °ó¶¨µã»÷ÊÂ¼ş
+            // ç»‘å®šç‚¹å‡»äº‹ä»¶
             string roomName = session.Name;
             button.onClick.AddListener(() => {
-                DebugLog($"µã»÷¼òµ¥°´Å¥: {roomName}");
+                DebugLog($"Click the simple button: {roomName}");
                 OnRoomItemClickedByName(roomName);
             });
 
             _roomItemInstances.Add(buttonGO);
-            DebugLog($"´´½¨ÁË¼òµ¥·¿¼ä°´Å¥: {session.Name}");
+            DebugLog($"Created a 'Simple Room' button: {session.Name}");
         }
 
         private void OnRoomItemClicked(SessionInfo session)
@@ -338,7 +338,7 @@ namespace Fusion
 
         private void OnCreateRoomClicked()
         {
-            DebugLog("µã»÷´´½¨·¿¼ä°´Å¥");
+            DebugLog("Click the Create Room button");
 
             if (!ValidateNickname()) return;
 
@@ -353,7 +353,7 @@ namespace Fusion
 
         private void OnRefreshClicked()
         {
-            DebugLog("µã»÷Ë¢ĞÂ°´Å¥");
+            DebugLog("Click the refresh button");
 
             if (_lobbyRunner == null)
             {
@@ -361,7 +361,7 @@ namespace Fusion
             }
             else
             {
-                SetStatus("ÕıÔÚË¢ĞÂ·¿¼äÁĞ±í...");
+                SetStatus("Refreshing room list...");
             }
             _lastRefreshTime = Time.time;
         }
@@ -376,24 +376,24 @@ namespace Fusion
 
             if (_isJoiningGame)
             {
-                DebugLog("ÒÑ¾­ÔÚ¼ÓÈëÓÎÏ·ÖĞ£¬ºöÂÔ", true);
+                DebugLog("Already joining the game, ignore.", true);
                 return;
             }
 
             if (!ValidateNickname()) return;
 
             _isJoiningGame = true;
-            SetStatus($"ÕıÔÚ´´½¨·¿¼ä: {roomName}...");
+            SetStatus($"Creating a room: {roomName}...");
             ShowLoading(true);
 
             DisconnectFromLobby();
 
             _bootstrap.DefaultRoomName = roomName;
-            DebugLog($"ÉèÖÃ DefaultRoomName = {roomName}");
+            DebugLog($"è®¾ç½® DefaultRoomName = {roomName}");
 
             HideLobby();
 
-            DebugLog($"µ÷ÓÃ FusionBootstrap Æô¶¯, GameMode={gameMode}");
+            DebugLog($"è°ƒç”¨ FusionBootstrap å¯åŠ¨, GameMode={gameMode}");
 
             switch (gameMode)
             {
@@ -423,24 +423,24 @@ namespace Fusion
 
             if (_isJoiningGame)
             {
-                DebugLog("ÒÑ¾­ÔÚ¼ÓÈëÓÎÏ·ÖĞ£¬ºöÂÔ", true);
+                DebugLog("Already joining the game, ignore.", true);
                 return;
             }
 
             if (!ValidateNickname()) return;
 
             _isJoiningGame = true;
-            SetStatus($"ÕıÔÚ¼ÓÈë·¿¼ä: {roomName}...");
+            SetStatus($"Joining the room: {roomName}...");
             ShowLoading(true);
 
             DisconnectFromLobby();
 
             _bootstrap.DefaultRoomName = roomName;
-            DebugLog($"ÉèÖÃ DefaultRoomName = {roomName}");
+            DebugLog($"Set DefaultRoomName = {roomName}");
 
             HideLobby();
 
-            DebugLog($"µ÷ÓÃ FusionBootstrap ¼ÓÈë, GameMode={gameMode}");
+            DebugLog($"Call FusionBootstrap to join, GameMode={gameMode}");
 
             switch (gameMode)
             {
@@ -478,12 +478,12 @@ namespace Fusion
 
             if (nickname.Length > 16)
             {
-                SetStatus("êÇ³Æ×î¶à16¸ö×Ö·û£¡");
+                SetStatus("Nicknames must be no longer than 16 characters! ");
                 return false;
             }
 
             PlayerNickname = nickname;
-            DebugLog($"Íæ¼ÒêÇ³Æ: {nickname}");
+            DebugLog($"Player Nickname: {nickname}");
             return true;
         }
 
@@ -522,7 +522,7 @@ namespace Fusion
         {
             if (runner != _lobbyRunner) return;
 
-            DebugLog($"ÊÕµ½·¿¼äÁĞ±í¸üĞÂ£¬¹² {sessionList.Count} ¸ö·¿¼ä");
+            DebugLog($"æ”¶åˆ°æˆ¿é—´åˆ—è¡¨æ›´æ–°ï¼Œå…± {sessionList.Count} ä¸ªæˆ¿é—´");
 
             foreach (var session in sessionList)
             {
@@ -537,12 +537,12 @@ namespace Fusion
         {
             if (runner == _lobbyRunner)
             {
-                DebugLog($"´óÌü Runner ¹Ø±Õ: {shutdownReason}");
+                DebugLog($"å¤§å… Runner å…³é—­: {shutdownReason}");
                 _lobbyRunner = null;
             }
         }
 
-        // ¿ÕÊµÏÖ
+        // ç©ºå®ç°
         public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
         public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
         public void OnInput(NetworkRunner runner, NetworkInput input) { }
@@ -565,7 +565,7 @@ namespace Fusion
     }
 
     /// <summary>
-    /// ·¿¼äÁĞ±íÏî×é¼ş
+    /// æˆ¿é—´åˆ—è¡¨é¡¹ç»„ä»¶
     /// </summary>
     public class RoomListItem : MonoBehaviour
     {
@@ -594,7 +594,7 @@ namespace Fusion
                 joinButton.interactable = session.PlayerCount < session.MaxPlayers;
             }
 
-            // Èç¹ûÃ»ÓĞµ¥¶ÀµÄ°´Å¥£¬Õû¸öItem¶¼¿Éµã»÷
+            // å¦‚æœæ²¡æœ‰å•ç‹¬çš„æŒ‰é’®ï¼Œæ•´ä¸ªIteméƒ½å¯ç‚¹å‡»
             var itemButton = GetComponent<Button>();
             if (itemButton != null && itemButton != joinButton)
             {
@@ -605,7 +605,7 @@ namespace Fusion
 
         private void OnJoinButtonClicked()
         {
-            Debug.Log($"[RoomListItem] µã»÷¼ÓÈë·¿¼ä: {_sessionInfo.Name}");
+            Debug.Log($"[RoomListItem] Click to join the room: {_sessionInfo.Name}");
             _onJoinClicked?.Invoke(_sessionInfo);
         }
     }

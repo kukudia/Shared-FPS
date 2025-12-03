@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEngine;
@@ -9,15 +9,15 @@ using Fusion;
 
 
 /// <summary>
-/// ±à¼­Æ÷¹¤¾ß - ×Ô¶¯´´½¨´óÌüUI Canvas
-/// Ê¹ÓÃ·½·¨: ÔÚUnity²Ëµ¥À¸Ñ¡Ôñ Fusion > Create Lobby UI
+/// ç¼–è¾‘å™¨å·¥å…· - è‡ªåŠ¨åˆ›å»ºå¤§å…UI Canvas
+/// ä½¿ç”¨æ–¹æ³•: åœ¨Unityèœå•æ é€‰æ‹© Fusion > Create Lobby UI
 /// </summary>
 public class FusionLobbyUICreator : Editor
 {
     [MenuItem("Fusion/Create Lobby UI")]
     public static void CreateLobbyUI()
     {
-        // ´´½¨Canvas
+        // åˆ›å»ºCanvas
         var canvasGO = new GameObject("LobbyCanvas");
         var canvas = canvasGO.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -30,46 +30,46 @@ public class FusionLobbyUICreator : Editor
 
         canvasGO.AddComponent<GraphicRaycaster>();
 
-        // ´´½¨Ö÷Ãæ°å
+        // åˆ›å»ºä¸»é¢æ¿
         var lobbyPanel = CreatePanel(canvasGO.transform, "LobbyPanel", new Vector2(400, 600));
 
-        // ´´½¨±êÌâ
+        // åˆ›å»ºæ ‡é¢˜
         CreateText(lobbyPanel.transform, "TitleText", "Lobby", 36, new Vector2(0, 250));
 
-        // ´´½¨êÇ³ÆÊäÈë
+        // åˆ›å»ºæ˜µç§°è¾“å…¥
         CreateText(lobbyPanel.transform, "NicknameLabel", "Nickname:", 20, new Vector2(-120, 180));
         var nicknameInput = CreateInputField(lobbyPanel.transform, "NicknameInput", "Input nickname...", new Vector2(50, 180), new Vector2(200, 40));
 
-        // ´´½¨·¿¼äÃûÊäÈë
+        // åˆ›å»ºæˆ¿é—´åè¾“å…¥
         CreateText(lobbyPanel.transform, "RoomNameLabel", "Room name:", 20, new Vector2(-120, 120));
         var roomNameInput = CreateInputField(lobbyPanel.transform, "RoomNameInput", "Input room name...", new Vector2(50, 120), new Vector2(200, 40));
 
-        // ´´½¨×î´óÍæ¼ÒÊıÊäÈë
+        // åˆ›å»ºæœ€å¤§ç©å®¶æ•°è¾“å…¥
         CreateText(lobbyPanel.transform, "MaxPlayersLabel", "Maxium player:", 20, new Vector2(-120, 60));
         var maxPlayersInput = CreateInputField(lobbyPanel.transform, "MaxPlayersInput", "4", new Vector2(50, 60), new Vector2(100, 40));
 
-        // ´´½¨°´Å¥
+        // åˆ›å»ºæŒ‰é’®
         var createButton = CreateButton(lobbyPanel.transform, "CreateRoomButton", "Create room", new Vector2(0, -10), new Vector2(200, 50));
         var refreshButton = CreateButton(lobbyPanel.transform, "RefreshButton", "Refresh list", new Vector2(0, -70), new Vector2(200, 50));
 
-        // ´´½¨×´Ì¬ÎÄ±¾
+        // åˆ›å»ºçŠ¶æ€æ–‡æœ¬
         var statusText = CreateText(lobbyPanel.transform, "StatusText", "Input nickname", 16, new Vector2(0, -130));
 
-        // ´´½¨·¿¼äÁĞ±íÃæ°å
+        // åˆ›å»ºæˆ¿é—´åˆ—è¡¨é¢æ¿
         var roomListPanel = CreatePanel(lobbyPanel.transform, "RoomListPanel", new Vector2(380, 200));
         roomListPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -280);
 
-        // ´´½¨Scroll View
+        // åˆ›å»ºScroll View
         var scrollView = CreateScrollView(roomListPanel.transform, "RoomListScrollView");
 
-        // ´´½¨¼ÓÔØÖ¸Ê¾Æ÷
+        // åˆ›å»ºåŠ è½½æŒ‡ç¤ºå™¨
         var loadingIndicator = CreateText(lobbyPanel.transform, "LoadingIndicator", "Loading...", 20, new Vector2(0, 0));
         loadingIndicator.SetActive(false);
 
-        // ´´½¨·¿¼äÏîPrefab
+        // åˆ›å»ºæˆ¿é—´é¡¹Prefab
         var roomItemPrefab = CreateRoomItemPrefab();
 
-        // ²éÕÒ²¢ÅäÖÃFusionLobbyUI×é¼ş
+        // æŸ¥æ‰¾å¹¶é…ç½®FusionLobbyUIç»„ä»¶
         var fusionBootstrap = FindObjectOfType<FusionBootstrap>();
         if (fusionBootstrap != null)
         {
@@ -79,7 +79,7 @@ public class FusionLobbyUICreator : Editor
                 lobbyUI = fusionBootstrap.gameObject.AddComponent<FusionLobbyUI>();
             }
 
-            // Ê¹ÓÃSerializedObjectÀ´ÉèÖÃË½ÓĞ×Ö¶Î
+            // ä½¿ç”¨SerializedObjectæ¥è®¾ç½®ç§æœ‰å­—æ®µ
             var serializedObject = new SerializedObject(lobbyUI);
 
             serializedObject.FindProperty("lobbyPanel").objectReferenceValue = lobbyPanel;
@@ -96,15 +96,15 @@ public class FusionLobbyUICreator : Editor
 
             serializedObject.ApplyModifiedProperties();
 
-            Debug.Log("FusionLobbyUI ÒÑÅäÖÃÍê³É£¡");
+            Debug.Log("FusionLobbyUI å·²é…ç½®å®Œæˆï¼");
         }
         else
         {
-            Debug.LogWarning("Î´ÕÒµ½FusionBootstrap×é¼ş£¬ÇëÊÖ¶¯ÅäÖÃFusionLobbyUIµÄÒıÓÃ¡£");
+            Debug.LogWarning("æœªæ‰¾åˆ°FusionBootstrapç»„ä»¶ï¼Œè¯·æ‰‹åŠ¨é…ç½®FusionLobbyUIçš„å¼•ç”¨ã€‚");
         }
 
         Selection.activeGameObject = canvasGO;
-        Debug.Log("´óÌüUI´´½¨Íê³É£¡");
+        Debug.Log("å¤§å…UIåˆ›å»ºå®Œæˆï¼");
     }
 
     private static GameObject CreatePanel(Transform parent, string name, Vector2 size)
@@ -153,7 +153,7 @@ public class FusionLobbyUICreator : Editor
 
         var inputField = inputGO.AddComponent<TMP_InputField>();
 
-        // ´´½¨ÎÄ±¾ÇøÓò
+        // åˆ›å»ºæ–‡æœ¬åŒºåŸŸ
         var textArea = new GameObject("Text Area");
         textArea.transform.SetParent(inputGO.transform, false);
         var textAreaRect = textArea.AddComponent<RectTransform>();
@@ -163,7 +163,7 @@ public class FusionLobbyUICreator : Editor
         textAreaRect.offsetMax = new Vector2(-10, -5);
         textArea.AddComponent<RectMask2D>();
 
-        // ´´½¨Placeholder
+        // åˆ›å»ºPlaceholder
         var placeholderGO = new GameObject("Placeholder");
         placeholderGO.transform.SetParent(textArea.transform, false);
         var placeholderRect = placeholderGO.AddComponent<RectTransform>();
@@ -177,7 +177,7 @@ public class FusionLobbyUICreator : Editor
         placeholderText.color = new Color(0.5f, 0.5f, 0.5f, 1f);
         placeholderText.alignment = TextAlignmentOptions.Left;
 
-        // ´´½¨Text
+        // åˆ›å»ºText
         var textGO = new GameObject("Text");
         textGO.transform.SetParent(textArea.transform, false);
         var textRect = textGO.AddComponent<RectTransform>();
@@ -190,7 +190,7 @@ public class FusionLobbyUICreator : Editor
         inputText.color = Color.white;
         inputText.alignment = TextAlignmentOptions.Left;
 
-        // ÅäÖÃInputField
+        // é…ç½®InputField
         inputField.textViewport = textAreaRect;
         inputField.textComponent = inputText;
         inputField.placeholder = placeholderText;
@@ -213,14 +213,14 @@ public class FusionLobbyUICreator : Editor
         var button = buttonGO.AddComponent<Button>();
         button.targetGraphic = image;
 
-        // ÉèÖÃ°´Å¥ÑÕÉ«×´Ì¬
+        // è®¾ç½®æŒ‰é’®é¢œè‰²çŠ¶æ€
         var colors = button.colors;
         colors.normalColor = new Color(0.2f, 0.4f, 0.8f, 1f);
         colors.highlightedColor = new Color(0.3f, 0.5f, 0.9f, 1f);
         colors.pressedColor = new Color(0.1f, 0.3f, 0.7f, 1f);
         button.colors = colors;
 
-        // ´´½¨°´Å¥ÎÄ×Ö
+        // åˆ›å»ºæŒ‰é’®æ–‡å­—
         var textGO = new GameObject("Text");
         textGO.transform.SetParent(buttonGO.transform, false);
         var textRect = textGO.AddComponent<RectTransform>();
@@ -305,7 +305,7 @@ public class FusionLobbyUICreator : Editor
         layoutGroup.spacing = 10;
         layoutGroup.padding = new RectOffset(10, 10, 5, 5);
 
-        // ·¿¼äÃû
+        // æˆ¿é—´å
         var roomNameGO = new GameObject("RoomNameText");
         roomNameGO.transform.SetParent(itemGO.transform, false);
         var roomNameRect = roomNameGO.AddComponent<RectTransform>();
@@ -317,7 +317,7 @@ public class FusionLobbyUICreator : Editor
         roomNameText.alignment = TextAlignmentOptions.Left;
         roomNameText.color = Color.white;
 
-        // Íæ¼ÒÊı
+        // ç©å®¶æ•°
         var playerCountGO = new GameObject("PlayerCountText");
         playerCountGO.transform.SetParent(itemGO.transform, false);
         var playerCountRect = playerCountGO.AddComponent<RectTransform>();
@@ -329,7 +329,7 @@ public class FusionLobbyUICreator : Editor
         playerCountText.alignment = TextAlignmentOptions.Center;
         playerCountText.color = Color.white;
 
-        // ¼ÓÈë°´Å¥
+        // åŠ å…¥æŒ‰é’®
         var joinButtonGO = new GameObject("JoinButton");
         joinButtonGO.transform.SetParent(itemGO.transform, false);
         var joinButtonRect = joinButtonGO.AddComponent<RectTransform>();
@@ -353,17 +353,17 @@ public class FusionLobbyUICreator : Editor
         joinText.alignment = TextAlignmentOptions.Center;
         joinText.color = Color.white;
 
-        // Ìí¼ÓRoomListItem×é¼ş
+        // æ·»åŠ RoomListItemç»„ä»¶
         var roomListItem = itemGO.AddComponent<RoomListItem>();
 
-        // Ê¹ÓÃSerializedObjectÉèÖÃÒıÓÃ
+        // ä½¿ç”¨SerializedObjectè®¾ç½®å¼•ç”¨
         var serializedObject = new SerializedObject(roomListItem);
         serializedObject.FindProperty("roomNameText").objectReferenceValue = roomNameText;
         serializedObject.FindProperty("playerCountText").objectReferenceValue = playerCountText;
         serializedObject.FindProperty("joinButton").objectReferenceValue = joinButton;
         serializedObject.ApplyModifiedProperties();
 
-        // ±£´æÎªPrefab
+        // ä¿å­˜ä¸ºPrefab
         string prefabPath = "Assets/RoomItemPrefab.prefab";
         PrefabUtility.SaveAsPrefabAsset(itemGO, prefabPath);
         DestroyImmediate(itemGO);

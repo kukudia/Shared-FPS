@@ -73,7 +73,7 @@ namespace Projectiles.UI
             _weapons.UpdateWeapons(_observedAgent.Weapons);
             _screenEffects.UpdateEffects(_observedAgent);
 
-            ShowAliveGroup(_observedAgent.Health.IsAlive);
+            ShowAliveGroup(_observedAgent.Health.IsAlive&&_observedAgent.gameStart);
         }
 
         // PRIVATE METHODS

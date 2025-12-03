@@ -20,7 +20,7 @@ namespace Projectiles
 		public SimpleKCC   KCC           { get; private set; }
 		public PlayerInput Input         { get; private set; }
 
-		public bool        InputBlocked  => Health.IsAlive == false;
+        public bool        InputBlocked  => Health.IsAlive == false;
 
         // PRIVATE MEMBERS
         [SerializeField] private Animator animator;
@@ -43,7 +43,6 @@ namespace Projectiles
 
 		public bool gameStart = false;
 
-
         [Networked]
 		private Vector3 _moveVelocity { get; set; }
 
@@ -59,7 +58,7 @@ namespace Projectiles
 			// This saves network traffic by not synchronizing networked properties to other clients except local player.
 			ReplicateToAll(false);
 			ReplicateTo(Object.InputAuthority, true);
-		}
+        }
 
 		public override void Despawned(NetworkRunner runner, bool hasState)
 		{
@@ -99,7 +98,7 @@ namespace Projectiles
             animator.SetFloat("Horizontal", moveSpeed.x, 0.1f, Time.deltaTime);
             animator.SetFloat("Vertical", moveSpeed.z, 0.1f, Time.deltaTime);
             animator.SetFloat("Speed", currentSpeed, 0.1f, Time.deltaTime);
-            animator.SetBool("Grounded", gameStart ? KCC.IsGrounded : true);
+            animator.SetBool("Grounded", !gameStart ? KCC.IsGrounded : true);
             animator.SetFloat("Pitch", KCC.GetLookRotation(true, false).x, 0.02f, Time.deltaTime);
             animator.SetFloat("Turn", deltaAngle, 0.1f, Time.deltaTime);
         }

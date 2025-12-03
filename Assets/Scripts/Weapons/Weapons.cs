@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Projectiles
 {
@@ -166,7 +167,7 @@ namespace Projectiles
 			// Equip first weapon
 			SwitchWeapon(minWeaponSlot, true);
 			RefreshWeapons();
-		}
+        }
 
 		public override void Despawned(NetworkRunner runner, bool hasState)
 		{
@@ -192,8 +193,8 @@ namespace Projectiles
 			if (CurrentWeapon == null)
 				return;
 
-			int layer = HasInputAuthority ? ObjectLayer.FirstPerson : ObjectLayer.ThirdPerson;
-			var offset = HasInputAuthority ? _firstPersonWeaponOffset : Vector3.zero;
+			int layer = HasInputAuthority ? (_agent.gameStart ? ObjectLayer.FirstPerson : ObjectLayer.ThirdPerson) : ObjectLayer.ThirdPerson;
+			var offset = HasInputAuthority ? (_agent.gameStart ? _firstPersonWeaponOffset : Vector3.zero) : Vector3.zero;
 
 			RefreshWeapons();
 			SetWeaponView(layer, offset);

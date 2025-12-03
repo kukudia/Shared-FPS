@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8784767329551419696
+--- !u!1 &3881216292821776859
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,62 +8,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2274423794400509505}
-  - component: {fileID: 5347085383687974572}
-  - component: {fileID: 1362431778540122705}
+  - component: {fileID: 8150291931643894490}
+  - component: {fileID: 4224138646340208222}
+  - component: {fileID: 5014403243654657100}
   m_Layer: 0
-  m_Name: Gameplay
+  m_Name: ReadySystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2274423794400509505
+--- !u!4 &8150291931643894490
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8784767329551419696}
+  m_GameObject: {fileID: 3881216292821776859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.0573022, y: -0.042385697, z: 1.9968481}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5347085383687974572
+--- !u!114 &4224138646340208222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8784767329551419696}
+  m_GameObject: {fileID: 3881216292821776859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e21847b529beb14b9fae293fd33f1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayers: 10
+  gameplaySceneName: Deathmatch
+  _GameStarted:
+    _value: 0
+--- !u!114 &5014403243654657100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881216292821776859}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SortKey: 3588825107
+  SortKey: 193965321
   ObjectInterest: 1
-  Flags: 264449
+  Flags: 262145
   NestedObjects: []
   NetworkedBehaviours:
-  - {fileID: 1362431778540122705}
+  - {fileID: 4224138646340208222}
   ForceRemoteRenderTimeframe: 0
---- !u!114 &1362431778540122705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8784767329551419696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967111a994dc4daa8e3b6a4ae9220805, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Players:
-    _items: []
-  readySystemPrefab: {fileID: 4224138646340208222, guid: 62a49905abb6b9342aab6b8d903175c1, type: 3}

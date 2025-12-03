@@ -19,9 +19,11 @@ namespace Projectiles
 		private static int _lastSingleInputChange;
 		private static int _cursorLockRequests;
 
-		// PUBLIC METHODS
+		private PlayerAgent _agent;
 
-		public void RequestCursorLock()
+        // PUBLIC METHODS
+
+        public void RequestCursorLock()
 		{
             // Static requests count is used for multi-peer setup
             _cursorLockRequests++;
@@ -91,13 +93,17 @@ namespace Projectiles
 
 		private void SetLockedState(bool value)
 		{
-			Cursor.lockState = value == true ? CursorLockMode.Locked : CursorLockMode.None;
-			Cursor.visible = !value;
+			if (_agent ==  null)
+			{
+				_agent = FindFirstObjectByType<PlayerAgent>();
+			}
+			Cursor.lockState = value == true ? (_agent.gameStart ? CursorLockMode.Locked : CursorLockMode.None) : CursorLockMode.None;
+			Cursor.visible = Cursor.lockState == CursorLockMode.None ? true : false;
 
 			if (_uIScreenEffects != null)
 			{
-                _uIScreenEffects.OnPause(!value);
-            }
+				_uIScreenEffects.OnPause(!value);
+			}
 
 			Debug.Log($"Cursor lock state {Cursor.lockState}, visibility {Cursor.visible}");
 		}
