@@ -79,13 +79,14 @@
         private void Start()
         {
             SetupButtonListeners();
-            ShowLobby();
-            ConnectToLobby();
+            Initialized();
         }
 
-        private void OnEnable()
+        private void Initialized()
         {
             loadingIndicator.alpha = 0f;
+            ShowLobby();
+            ConnectToLobby();
         }
 
         private void Update()
@@ -540,6 +541,16 @@
             UpdateRoomListUI();
         }
 
+        public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)
+        {
+            Initialized();
+        }
+
+        public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason)
+        {
+            Initialized();
+        }
+
         public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
         {
             if (runner == _lobbyRunner)
@@ -569,9 +580,7 @@
         public void OnInput(NetworkRunner runner, NetworkInput input) { }
         public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
         public void OnConnectedToServer(NetworkRunner runner) { }
-        public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason) { }
         public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
-        public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason) { }
         public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) { }
         public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) { }
         public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) { }
