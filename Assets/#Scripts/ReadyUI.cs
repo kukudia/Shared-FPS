@@ -1,6 +1,8 @@
+using DG.Tweening;
+using Fusion;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace Projectiles
 {
@@ -11,8 +13,10 @@ namespace Projectiles
     /// </summary>
     public class ReadyUI : MonoBehaviour
     {
+        public FusionLobbyUI lobbyUI;
+
         [Header("UI References")]
-        [SerializeField] private GameObject readyPanel;
+        [SerializeField] private CanvasGroup readyPanel;
         [SerializeField] private Button readyButton;
         [SerializeField] private TMP_Text buttonText;
         [SerializeField] private TMP_Text statusText;
@@ -38,6 +42,7 @@ namespace Projectiles
 
         private void Start()
         {
+            readyPanel.alpha = 0f;
             if (readyButton != null)
             {
                 readyButton.onClick.AddListener(OnButtonClicked);
@@ -136,18 +141,7 @@ namespace Projectiles
                 if (isHost)
                 {
                     // 房主显示: "开始游戏 (准备人数/总人数)"
-                    // 注意: 准备人数不包括房主自己
-                    int otherPlayersReady = readyCount - 1; // 减去房主
-                    int otherPlayersTotal = playerCount - 1; // 减去房主
-
-                    if (otherPlayersTotal <= 0)
-                    {
-                        buttonText.text = $"{hostButtonText} (Waiting for players)";
-                    }
-                    else
-                    {
-                        buttonText.text = $"{hostButtonText} ({otherPlayersReady}/{otherPlayersTotal})";
-                    }
+                    buttonText.text = $"{hostButtonText} ({readyCount}/{playerCount})";
                 }
                 else
                 {
@@ -203,6 +197,9 @@ namespace Projectiles
                     statusText.text = $"{waitingText} ({otherPlayersReady}/{otherPlayersTotal})";
                 }
             }
+
+            lobbyUI.ShowLoading(false);
+            SetPanelVisualization(readyPanel, 255f, true);
         }
 
         private void OnGameStarted()
@@ -243,11 +240,17 @@ namespace Projectiles
         /// <summary>
         /// 显示/隐藏准备面板
         /// </summary>
-        public void SetPanelVisible(bool visible)
+        private void SetPanelVisualization(CanvasGroup group, float targetAlpha, bool load)
         {
-            if (readyPanel != null)
+            DOTween.Kill(group);
+
+            if (load)
             {
-                readyPanel.SetActive(visible);
+                group.DOFade(targetAlpha, 0.1f);
+            }
+            else
+            {
+                group.DOFade(0f, 0.7f);
             }
         }
     }

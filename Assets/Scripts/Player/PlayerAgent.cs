@@ -1,85 +1,87 @@
 ﻿using Fusion;
 using UnityEngine;
 using Fusion.Addons.SimpleKCC;
+using WebSocketSharp;
 
 namespace Projectiles
 {
-	/// <summary>
-	/// Main script handling player agent. It provides access to common components and handles movement input processing and camera.
-	/// </summary>
-	[DefaultExecutionOrder(-5)]
-	[RequireComponent(typeof(Weapons), typeof(Health), typeof(SimpleKCC))]
-	public class PlayerAgent : ContextBehaviour
-	{
-		private float lastRotationY;
+    /// <summary>
+    /// Main script handling player agent. It provides access to common components and handles movement input processing and camera.
+    /// </summary>
+    [DefaultExecutionOrder(-5)]
+    [RequireComponent(typeof(Weapons), typeof(Health), typeof(SimpleKCC))]
+    public class PlayerAgent : ContextBehaviour
+    {
+        private float lastRotationY;
 
         [Networked]
-		public Player      Owner         { get; set; }
-		public Weapons     Weapons       { get; private set; }
-		public Health      Health        { get; private set; }
-		public SimpleKCC   KCC           { get; private set; }
-		public PlayerInput Input         { get; private set; }
+        public Player Owner { get; set; }
+        public Weapons Weapons { get; private set; }
+        public Health Health { get; private set; }
+        public SimpleKCC KCC { get; private set; }
+        public PlayerInput Input { get; private set; }
 
-        public bool        InputBlocked  => Health.IsAlive == false;
+        public bool InputBlocked => Health.IsAlive == false;
 
         // PRIVATE MEMBERS
         [SerializeField] private Animator animator;
         [SerializeField] private Transform _cameraPivot;
-		[SerializeField] private Transform _cameraHandle;
+        [SerializeField] private Transform _cameraHandle;
 
         [SerializeField] public float baseSpeed = 2f;
         [SerializeField] public float multiplier = 1f;
 
         [Header("Movement")]
-		[SerializeField] private float _moveSpeed = 6f;
-		[SerializeField] public float _upGravity = 15f;
-		[SerializeField] public float _downGravity = 25f;
-		[SerializeField] private float _maxCameraAngle = 75f;
-		[SerializeField] private float _jumpImpulse = 6f;
-		[SerializeField] public float _groundAcceleration = 55f;
-		[SerializeField] public float _groundDeceleration = 25f;
-		[SerializeField] public float _airAcceleration = 25f;
-		[SerializeField] public float _airDeceleration = 1.3f;
+        [SerializeField] private float _moveSpeed = 6f;
+        [SerializeField] public float _upGravity = 15f;
+        [SerializeField] public float _downGravity = 25f;
+        [SerializeField] private float _maxCameraAngle = 75f;
+        [SerializeField] private float _jumpImpulse = 6f;
+        [SerializeField] public float _groundAcceleration = 55f;
+        [SerializeField] public float _groundDeceleration = 25f;
+        [SerializeField] public float _airAcceleration = 25f;
+        [SerializeField] public float _airDeceleration = 1.3f;
 
-		public bool gameStart = false;
+        public bool gameStart = false;
 
         [Networked]
-		private Vector3 _moveVelocity { get; set; }
+        private Vector3 _moveVelocity { get; set; }
 
-		private Vector2 _lastFUNLookRotation;
+        private Vector2 _lastFUNLookRotation;
 
-		// NetworkBehaviour INTERFACE
+        // NetworkBehaviour INTERFACE
 
-		public override void Spawned()
-		{
-			name = Object.InputAuthority.ToString();
+        public override void Spawned()
+        {
+            name = FusionLobbyUI.PlayerNickname.IsNullOrEmpty() ? Object.InputAuthority.ToString() : FusionLobbyUI.PlayerNickname;
+            Debug.Log($"[PlayerAgent] Player name: {name}");
 
-			// Only local player needs networked properties (move velocity).
-			// This saves network traffic by not synchronizing networked properties to other clients except local player.
-			ReplicateToAll(false);
-			ReplicateTo(Object.InputAuthority, true);
+            // Only local player needs networked properties (move velocity).
+            // This saves network traffic by not synchronizing networked properties to other clients except local player.
+            ReplicateToAll(false);
+            ReplicateTo(Object.InputAuthority, true);
         }
 
-		public override void Despawned(NetworkRunner runner, bool hasState)
-		{
-			Owner = null;
-		}
+        public override void Despawned(NetworkRunner runner, bool hasState)
+        {
+            Owner = null;
+        }
 
-		public override void FixedUpdateNetwork()
-		{
-			if (!gameStart) return;
+        public override void FixedUpdateNetwork()
+        {
+            if (!gameStart) return;
 
-			if (Owner != null && Health.IsAlive == true)
-			{
-				ProcessMovementInput();
-			}
+            if (Owner != null && Health.IsAlive == true)
+            {
+                ProcessMovementInput();
+            }
 
-			// Setting camera pivot rotation
-			var pitchRotation = KCC.GetLookRotation(true, false);
-			_cameraPivot.localRotation = Quaternion.Euler(pitchRotation);
+            // Setting camera pivot rotation
+            var pitchRotation = KCC.GetLookRotation(true, false);
+            _cameraPivot.localRotation = Quaternion.Euler(pitchRotation);
 
-			_lastFUNLookRotation = KCC.GetLookRotation();
-		}
+            _lastFUNLookRotation = KCC.GetLookRotation();
+        }
 
         public override void Render()
         {
@@ -94,51 +96,53 @@ namespace Projectiles
 
             // Transform velocity vector to local space.
             Vector3 moveSpeed = transform.InverseTransformVector(KCC.RealVelocity);
-			float currentSpeed = new Vector3(moveSpeed.x, moveSpeed.y, moveSpeed.z).sqrMagnitude;
+            float currentSpeed = new Vector3(moveSpeed.x, moveSpeed.y, moveSpeed.z).sqrMagnitude;
+
+            animator.SetBool("Active", gameStart ? Health.IsAlive : true);
             animator.SetFloat("Horizontal", moveSpeed.x, 0.1f, Time.deltaTime);
             animator.SetFloat("Vertical", moveSpeed.z, 0.1f, Time.deltaTime);
             animator.SetFloat("Speed", currentSpeed, 0.1f, Time.deltaTime);
-            animator.SetBool("Grounded", !gameStart ? KCC.IsGrounded : true);
+            animator.SetBool("Grounded", gameStart ? KCC.IsGrounded : true);
             animator.SetFloat("Pitch", KCC.GetLookRotation(true, false).x, 0.02f, Time.deltaTime);
             animator.SetFloat("Turn", deltaAngle, 0.1f, Time.deltaTime);
         }
 
-		// MONOBEHAVIOUR
+        // MONOBEHAVIOUR
 
-		protected void Awake()
-		{
-			KCC = GetComponent<SimpleKCC>();
-			Weapons = GetComponent<Weapons>();
-			Health = GetComponent<Health>();
-			Input = GetComponent<PlayerInput>();
-		}
+        protected void Awake()
+        {
+            KCC = GetComponent<SimpleKCC>();
+            Weapons = GetComponent<Weapons>();
+            Health = GetComponent<Health>();
+            Input = GetComponent<PlayerInput>();
+        }
 
-		protected void LateUpdate()
-		{
-			if (!gameStart) return;
+        protected void LateUpdate()
+        {
+            if (!gameStart) return;
 
-			if (HasInputAuthority == true && Owner != null && Health.IsAlive == true)
-			{
-				// For responsive look experience we use last FUN look + accumulated look rotation delta
-				KCC.SetLookRotation(_lastFUNLookRotation + Input.AccumulatedLook, -_maxCameraAngle, _maxCameraAngle);
-			}
+            if (HasInputAuthority == true && Owner != null && Health.IsAlive == true)
+            {
+                // For responsive look experience we use last FUN look + accumulated look rotation delta
+                KCC.SetLookRotation(_lastFUNLookRotation + Input.AccumulatedLook, -_maxCameraAngle, _maxCameraAngle);
+            }
 
-			// Update camera pitch
-			// Camera pivot influences also weapon rotation so it needs to be set on proxies as well
-			var pitchRotation = KCC.GetLookRotation(true, false);
-			_cameraPivot.localRotation = Quaternion.Euler(pitchRotation);
+            // Update camera pitch
+            // Camera pivot influences also weapon rotation so it needs to be set on proxies as well
+            var pitchRotation = KCC.GetLookRotation(true, false);
+            _cameraPivot.localRotation = Quaternion.Euler(pitchRotation);
 
             //SmoothCameraHandleRotation();
 
             if (HasInputAuthority)
-			{
-				var cameraTransform = Context.Camera.transform;
+            {
+                var cameraTransform = Context.Camera.transform;
 
-				// Setting base camera transform based on handle
-				cameraTransform.position = _cameraHandle.position;
-				cameraTransform.rotation = _cameraHandle.rotation;
-			}
-		}
+                // Setting base camera transform based on handle
+                cameraTransform.position = _cameraHandle.position;
+                cameraTransform.rotation = _cameraHandle.rotation;
+            }
+        }
 
         private void SmoothCameraHandleRotation()
         {
@@ -160,35 +164,35 @@ namespace Projectiles
         // PRIVATE METHODS
 
         private void ProcessMovementInput()
-		{
-			if (GetInput(out GameplayInput input) == false)
-				return;
+        {
+            if (GetInput(out GameplayInput input) == false)
+                return;
 
-			KCC.AddLookRotation(input.LookRotationDelta, -_maxCameraAngle, _maxCameraAngle);
+            KCC.AddLookRotation(input.LookRotationDelta, -_maxCameraAngle, _maxCameraAngle);
 
-			// It feels better when player falls quicker
-			KCC.SetGravity(KCC.RealVelocity.y >= 0f ? _upGravity : _downGravity);
+            // It feels better when player falls quicker
+            KCC.SetGravity(KCC.RealVelocity.y >= 0f ? _upGravity : _downGravity);
 
-			// Calculate input direction based on recently updated look rotation (the change propagates internally also to KCC.TransformRotation)
-			var inputDirection = KCC.TransformRotation * new Vector3(input.MoveDirection.x, 0f, input.MoveDirection.y);
+            // Calculate input direction based on recently updated look rotation (the change propagates internally also to KCC.TransformRotation)
+            var inputDirection = KCC.TransformRotation * new Vector3(input.MoveDirection.x, 0f, input.MoveDirection.y);
 
-			var desiredMoveVelocity = inputDirection * _moveSpeed;
-			float acceleration = 1f;
+            var desiredMoveVelocity = inputDirection * _moveSpeed;
+            float acceleration = 1f;
 
-			if (desiredMoveVelocity == Vector3.zero)
-			{
-				// No desired move velocity - we are stopping.
-				acceleration = KCC.IsGrounded == true ? _groundDeceleration : _airDeceleration;
-			}
-			else
-			{
-				acceleration = KCC.IsGrounded == true ? _groundAcceleration : _airAcceleration;
-			}
+            if (desiredMoveVelocity == Vector3.zero)
+            {
+                // No desired move velocity - we are stopping.
+                acceleration = KCC.IsGrounded == true ? _groundDeceleration : _airDeceleration;
+            }
+            else
+            {
+                acceleration = KCC.IsGrounded == true ? _groundAcceleration : _airAcceleration;
+            }
 
-			_moveVelocity = Vector3.Lerp(_moveVelocity, desiredMoveVelocity, acceleration * Runner.DeltaTime);
+            _moveVelocity = Vector3.Lerp(_moveVelocity, desiredMoveVelocity, acceleration * Runner.DeltaTime);
 
-			float jumpImpulse = input.Buttons.WasPressed(Input.PreviousButtons, EInputButton.Jump) && KCC.IsGrounded ? _jumpImpulse : 0f;
-			KCC.Move(_moveVelocity, jumpImpulse);
-		}
-	}
+            float jumpImpulse = input.Buttons.WasPressed(Input.PreviousButtons, EInputButton.Jump) && KCC.IsGrounded ? _jumpImpulse : 0f;
+            KCC.Move(_moveVelocity, jumpImpulse);
+        }
+    }
 }

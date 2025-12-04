@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Projectiles
 {
@@ -20,7 +21,8 @@ namespace Projectiles
         [Header("Ready System")]
         [SerializeField] private ReadySystem readySystemPrefab;
 
-        private SpawnPoint[] _spawnPoints;
+        public SpawnPoint[] _spawnPoints;
+        public SpawnPointInGame[] _spawnPointsInGame;
         private int _lastSpawnPoint = -1;
 
         private List<SpawnRequest> _spawnRequests = new();
@@ -155,6 +157,11 @@ namespace Projectiles
         {
         }
 
+        public void SpawnPlayerAgentFromReady(Player player)
+        {
+            SpawnPlayerAgent(player);
+        }
+
         protected void SpawnPlayerAgent(Player player)
         {
             DespawnPlayerAgent(player);
@@ -208,16 +215,29 @@ namespace Projectiles
 
         private PlayerAgent SpawnAgent(PlayerRef inputAuthority, PlayerAgent agentPrefab)
         {
-            if (_spawnPoints == null)
+            if (Context.ReadySystem != null && Context.ReadySystem.GameStarted)
             {
-                _spawnPoints = Runner.SimulationUnityScene.FindObjectsOfTypeInOrder<SpawnPoint>(false);
+                if (_spawnPointsInGame.Length == 0)
+                {
+                    _spawnPointsInGame = SceneManager.GetSceneByName(Context.ReadySystem.gameplaySceneName).FindObjectsOfTypeInOrder<SpawnPointInGame>(false);
+                }
+                _lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPointsInGame.Length;
+                var spawnPointInGame = _spawnPointsInGame[_lastSpawnPoint].transform;
+                var agent = Runner.Spawn(agentPrefab, spawnPointInGame.position, spawnPointInGame.rotation, inputAuthority);
+                Debug.Log($"[Gameplay] {agent} spawn at {spawnPointInGame}");
+                return agent;
             }
-
-            _lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPoints.Length;
-            var spawnPoint = _spawnPoints[_lastSpawnPoint].transform;
-
-            var agent = Runner.Spawn(agentPrefab, spawnPoint.position, spawnPoint.rotation, inputAuthority);
-            return agent;
+            else
+            {
+                if (_spawnPoints.Length == 0)
+                {
+                    _spawnPoints = Runner.SimulationUnityScene.FindObjectsOfTypeInOrder<SpawnPoint>(false);
+                }
+                _lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPoints.Length;
+                var spawnPoint = _spawnPoints[_lastSpawnPoint].transform;
+                var agent = Runner.Spawn(agentPrefab, spawnPoint.position, spawnPoint.rotation, inputAuthority);
+                return agent;
+            }
         }
 
         private void DespawnAgent(PlayerAgent agent)

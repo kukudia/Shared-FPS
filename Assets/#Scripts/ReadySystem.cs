@@ -18,7 +18,7 @@ namespace Projectiles
 
         [Header("Settings")]
         [SerializeField] private int maxPlayers = 4;
-        [SerializeField] private string gameplaySceneName = "Gameplay";
+        public string gameplaySceneName = "Gameplay";
 
         [Header("Scene Loading Options")]
         [Tooltip("是否使用 Additive 模式加载场景（保持玩家对象）")]
@@ -194,22 +194,50 @@ namespace Projectiles
         [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
         private void RPC_OnGameStart()
         {
-            Debug.Log("[ReadySystem] RPC_OnGameStart received");
+            Debug.Log($"[ReadySystem] RPC_OnGameStart received - HasStateAuthority: {HasStateAuthority}, Runner: {(Runner != null ? Runner.name : "NULL")}");
 
             // 标记所有玩家对象为跨场景保持
+            Debug.Log("[ReadySystem] Marking players as persistent...");
             MarkPlayersAsPersistent();
 
             // 启动所有PlayerAgent
+            Debug.Log("[ReadySystem] Starting all PlayerAgents...");
             StartAllPlayerAgents();
 
+            // 刷新并锁定光标（确保输入正常工作）
+            Debug.Log("[ReadySystem] Refreshing input after game start...");
+            RefreshInputAfterGameStart();
+
             // 触发事件
+            Debug.Log("[ReadySystem] Invoking OnGameStarted event...");
             OnGameStarted?.Invoke();
 
             // 加载游戏场景（仅服务器执行）
             if (HasStateAuthority)
             {
+                Debug.Log("[ReadySystem] HasStateAuthority=true, loading gameplay scene...");
                 LoadGameplayScene();
             }
+            else
+            {
+                Debug.Log("[ReadySystem] HasStateAuthority=false, waiting for scene load from server");
+            }
+        }
+
+        /// <summary>
+        /// 游戏开始后刷新输入系统
+        /// </summary>
+        private void RefreshInputAfterGameStart()
+        {
+            if (Context == null || Context.GeneralInput == null)
+            {
+                Debug.LogWarning("[ReadySystem] Context.GeneralInput is null, cannot refresh input");
+                return;
+            }
+
+            // 刷新 GeneralInput 的 PlayerAgent 引用并锁定光标
+            Context.GeneralInput.ForceLockCursor();
+            Debug.Log("[ReadySystem] Input refreshed and cursor locked");
         }
 
         // PRIVATE METHODS
@@ -250,25 +278,52 @@ namespace Projectiles
 
         private void StartAllPlayerAgents()
         {
+            Debug.Log($"[ReadySystem] StartAllPlayerAgents called - Context: {(Context != null ? "Valid" : "NULL")}, Gameplay: {(Context?.Gameplay != null ? "Valid" : "NULL")}");
+
             if (Context.Gameplay != null)
             {
+                Debug.Log($"[ReadySystem] Players count: {Context.Gameplay.Players.Count}");
+
                 foreach (var kvp in Context.Gameplay.Players)
                 {
                     var player = kvp.Value;
+                    Debug.Log($"[ReadySystem] Player {kvp.Key}: {(player != null ? player.name : "NULL")}, ActiveAgent: {(player?.ActiveAgent != null ? player.ActiveAgent.name : "NULL")}");
+
                     if (player != null && player.ActiveAgent != null)
                     {
+                        // 设置 gameStart
                         player.ActiveAgent.gameStart = true;
-                        Debug.Log($"[ReadySystem] Started PlayerAgent for {kvp.Key}");
+                        Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
+
+                        // 初始化 PlayerBody
+                        var playerBody = player.ActiveAgent.GetComponent<PlayerBody>();
+                        if (playerBody != null)
+                        {
+                            playerBody.DisableVisual();
+                            Debug.Log($"[ReadySystem] Initialized PlayerBody for {player.ActiveAgent.name}");
+                        }
                     }
                 }
             }
             else
             {
+                Debug.Log("[ReadySystem] Context.Gameplay is null, using FindObjectsOfType fallback");
                 var agents = FindObjectsOfType<PlayerAgent>();
+                Debug.Log($"[ReadySystem] Found {agents.Length} PlayerAgents via FindObjectsOfType");
+
                 foreach (var agent in agents)
                 {
+                    // 设置 gameStart
                     agent.gameStart = true;
-                    Debug.Log($"[ReadySystem] Started PlayerAgent: {agent.name}");
+                    Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent: {agent.name}");
+
+                    // 初始化 PlayerBody
+                    //var playerBody = agent.GetComponent<PlayerBody>();
+                    //if (playerBody != null)
+                    //{
+                    //    playerBody.InitializeOnGameStart();
+                    //    Debug.Log($"[ReadySystem] Initialized PlayerBody for {agent.name}");
+                    //}
                 }
             }
         }

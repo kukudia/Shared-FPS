@@ -2,10 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
+    using DG.Tweening;
+    using Fusion.Sockets;
+    using Projectiles;
+    using TMPro;
     using UnityEngine;
     using UnityEngine.UI;
-    using TMPro;
-    using Fusion.Sockets;
 
     /// <summary>
     /// 大厅UI系统 - 替代FusionBootstrapDebugGUI
@@ -33,7 +35,7 @@
 
         [Header("Status")]
         [SerializeField] private TMP_Text statusText;
-        [SerializeField] private GameObject loadingIndicator;
+        [SerializeField] private CanvasGroup loadingIndicator;
 
         [Header("=== Settings ===")]
         [SerializeField] private GameMode gameMode = GameMode.Shared;
@@ -79,6 +81,11 @@
             SetupButtonListeners();
             ShowLobby();
             ConnectToLobby();
+        }
+
+        private void OnEnable()
+        {
+            loadingIndicator.alpha = 0f;
         }
 
         private void Update()
@@ -414,7 +421,7 @@
                     break;
             }
 
-            ShowLoading(false);
+            ShowLoading(true);
         }
 
         private void JoinRoom(string roomName)
@@ -458,7 +465,7 @@
                     break;
             }
 
-            ShowLoading(false);
+            ShowLoading(true);
         }
 
         #endregion
@@ -496,11 +503,11 @@
             Debug.Log($"[Lobby] {message}");
         }
 
-        private void ShowLoading(bool show)
+        public void ShowLoading(bool show)
         {
             if (loadingIndicator != null)
             {
-                loadingIndicator.SetActive(show);
+                SetPanelVisualization(loadingIndicator, 200f, show);
             }
         }
 
@@ -539,6 +546,20 @@
             {
                 DebugLog($"大厅 Runner 关闭: {shutdownReason}");
                 _lobbyRunner = null;
+            }
+        }
+
+        private void SetPanelVisualization(CanvasGroup group, float targetAlpha, bool load)
+        {
+            DOTween.Kill(group);
+
+            if (load)
+            {
+                group.DOFade(targetAlpha, 0.1f);
+            }
+            else
+            {
+                group.DOFade(0f, 0.7f);
             }
         }
 
