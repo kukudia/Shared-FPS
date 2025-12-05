@@ -155,11 +155,6 @@ MonoBehaviour:
   _airAcceleration: 25
   _airDeceleration: 1.3
   gameStart: 0
-  head: {fileID: 5746227041529736056}
-  nameTagPrefab: {fileID: 748771437421402692, guid: 879ad66f239bfff4087dd20144ca22df, type: 3}
-  maxDistance: 25
-  minScale: 0.5
-  maxScale: 1
 --- !u!114 &8517683973242102361
 MonoBehaviour:
   m_ObjectHideFlags: 0

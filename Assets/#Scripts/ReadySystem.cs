@@ -292,8 +292,8 @@ namespace Projectiles
                     if (player != null && player.ActiveAgent != null)
                     {
                         // 设置 gameStart
-                        player.ActiveAgent.gameStart = true;
-                        Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
+                        //player.ActiveAgent.gameStart = true;
+                        //Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
 
                         // 初始化 PlayerBody
                         var playerBody = player.ActiveAgent.GetComponent<PlayerBody>();
@@ -314,8 +314,8 @@ namespace Projectiles
                 foreach (var agent in agents)
                 {
                     // 设置 gameStart
-                    agent.gameStart = true;
-                    Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent: {agent.name}");
+                    //agent.gameStart = true;
+                    //Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent: {agent.name}");
 
                     // 初始化 PlayerBody
                     //var playerBody = agent.GetComponent<PlayerBody>();

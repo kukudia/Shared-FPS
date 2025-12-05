@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Fusion;
 using Fusion.Addons.SimpleKCC;
+using System;
 
 namespace Projectiles
 {
@@ -274,6 +275,8 @@ namespace Projectiles
 
                 // 延迟一帧执行，确保新场景的对象都已初始化
                 StartCoroutine(ReinitializeInputDelayed());
+
+                _agent.gameStart = true;
             }
         }
 

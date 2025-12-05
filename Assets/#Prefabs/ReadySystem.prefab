@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayers: 10
   gameplaySceneName: Deathmatch
+  useAdditiveSceneLoading: 1
+  unloadCurrentScene: 1
+  lobbySceneName: Lobby
   _GameStarted:
     _value: 0
 --- !u!114 &5014403243654657100
