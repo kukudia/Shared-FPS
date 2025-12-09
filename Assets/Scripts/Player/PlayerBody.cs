@@ -4,76 +4,74 @@ using UnityEngine.Rendering;
 
 namespace Projectiles
 {
-    /// <summary>
-    /// Component handling all visual/hierarchy related tasks and effects (immortality, death).
-    /// </summary>
     public class PlayerBody : ContextBehaviour
     {
-        // PRIVATE MEMBERS
-
-        [SerializeField]
-        private GameObject _root;
-        [SerializeField]
-        private GameObject _visual;
-        //[SerializeField] private GameObject _immortalityEffect;
-        [SerializeField]
-        private Transform _capTransform;
-        //[SerializeField] private Rigidbody _flyingCapPrefab;
-        [SerializeField]
-        private float _capImpulse = 10f;
-        [SerializeField]
-        private GameObject _deathEffectPrefab;
+        [SerializeField] private GameObject _root;
+        [SerializeField] private GameObject _visual;
+        [SerializeField] private Transform _capTransform;
+        [SerializeField] private float _capImpulse = 10f;
+        [SerializeField] private GameObject _deathEffectPrefab;
 
         private PlayerAgent _agent;
         private HitboxRoot _hitboxRoot;
 
-        // ContextBehaviour INTERFACE
+        private bool _lastGameStartState;
 
         public override void Spawned()
         {
-            if (!_agent.gameStart) return;
-
             _root.SetActive(_agent.Health.IsAlive);
             _agent.Health.FatalHitTaken += OnFatalHit;
 
-            DisableVisual();
+            // 记录初始状态
+            _lastGameStartState = _agent.gameStart;
+
+            ApplyVisualState(_agent.gameStart);
         }
 
-        public void DisableVisual()
+        public override void Render()
         {
-            // Disable visual for local player
+            // 当网络变量变化时自动同步
+            if (_agent == null) return;
+
+            if (_agent.gameStart != _lastGameStartState)
+            {
+                _lastGameStartState = _agent.gameStart;
+                ApplyVisualState(_agent.gameStart);
+            }
+        }
+
+        private void ApplyVisualState(bool gameStarted)
+        {
+            if (!gameStarted)
+                return;
+
             var renderers = _visual.GetComponentsInChildren<MeshRenderer>();
             for (int i = 0; i < renderers.Length; i++)
             {
-                renderers[i].shadowCastingMode = HasInputAuthority ? ShadowCastingMode.ShadowsOnly : ShadowCastingMode.On;
+                renderers[i].shadowCastingMode =
+                    HasInputAuthority ? ShadowCastingMode.ShadowsOnly : ShadowCastingMode.On;
             }
         }
 
         public override void FixedUpdateNetwork()
         {
-            // Disable hitbox detection when agent is dead
-            _hitboxRoot.HitboxRootActive = _agent.Health.IsAlive;
-        }
-
-        public override void Render()
-        {
-            //_immortalityEffect.SetActive(_agent.Health.IsImmortal);
+            if (_hitboxRoot != null)
+                _hitboxRoot.HitboxRootActive = _agent.Health.IsAlive;
         }
 
         public override void Despawned(NetworkRunner runner, bool hasState)
         {
-            _agent.Health.FatalHitTaken -= OnFatalHit;
+            if (_agent != null)
+            {
+                _agent.Health.FatalHitTaken -= OnFatalHit;
+            }
         }
-
-        // MONOBEHAVIOUR
 
         protected void Awake()
         {
             _agent = GetComponent<PlayerAgent>();
             _hitboxRoot = GetComponent<HitboxRoot>();
         }
-
-        // PRIVATE METHODS
 
         private void OnFatalHit(HitData hit)
         {
@@ -83,15 +81,8 @@ namespace Projectiles
             var deathEffect = Runner.InstantiateInRunnerScene(_deathEffectPrefab);
             deathEffect.transform.position = transform.position + Vector3.up;
 
-            //var flyingCap = Runner.InstantiateInRunnerScene(_flyingCapPrefab);
-            //flyingCap.transform.SetPositionAndRotation(_capTransform.position, _capTransform.rotation);
-
-            var direction = (hit.Direction + 2f * Vector3.up).normalized;
-            //flyingCap.AddForceAtPosition(direction * _capImpulse, flyingCap.transform.position - hit.Direction * 0.2f, ForceMode.Impulse);
-
             if (Runner.Config.PeerMode == NetworkProjectConfig.PeerModes.Multiple)
             {
-                //Runner.AddVisibilityNodes(flyingCap.gameObject);
                 Runner.AddVisibilityNodes(deathEffect.gameObject);
             }
         }

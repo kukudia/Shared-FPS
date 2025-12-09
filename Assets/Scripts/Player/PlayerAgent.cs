@@ -42,8 +42,8 @@ namespace Projectiles
         [SerializeField] public float _airAcceleration = 25f;
         [SerializeField] public float _airDeceleration = 1.3f;
 
-        public bool gameStart = false;
-        public bool enableMovement = false;
+        [Networked]
+        public NetworkBool gameStart { get; set; }
 
         [Networked]
         private Vector3 _moveVelocity { get; set; }
@@ -51,6 +51,18 @@ namespace Projectiles
         private Vector2 _lastFUNLookRotation;
 
         // NetworkBehaviour INTERFACE
+
+        public bool IsGameStartedSafe
+        {
+            get
+            {
+                // 如果还没 SpawnCompletion，返回 false
+                if (!Object || !Object.IsValid)
+                    return false;
+
+                return gameStart; // 网络安全
+            }
+        }
 
         public override void Spawned()
         {
@@ -62,7 +74,10 @@ namespace Projectiles
             ReplicateToAll(false);
             ReplicateTo(Object.InputAuthority, true);
 
-            enableMovement = gameStart;
+            if (gameStart)
+            {
+                Context.GeneralInput.ForceLockCursor();
+            }
         }
 
         public override void Despawned(NetworkRunner runner, bool hasState)
@@ -72,7 +87,7 @@ namespace Projectiles
 
         public override void FixedUpdateNetwork()
         {
-            if (!gameStart || !enableMovement) return;
+            if (!gameStart) return;
 
             if (Owner != null && Health.IsAlive == true)
             {

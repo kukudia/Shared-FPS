@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;
 using Fusion;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -201,17 +201,17 @@ namespace Projectiles
 
             // 刷新并锁定光标（确保输入正常工作）
             Debug.Log("[ReadySystem] Refreshing input after game start...");
-            RefreshInputAfterGameStart();
+            //RefreshInputAfterGameStart();
 
-            // 触发事件
+            // 触发事件，隐藏UI
             Debug.Log("[ReadySystem] Invoking OnGameStarted event...");
             OnGameStarted?.Invoke();
 
-            LoadGameplayScene();
-
             // 启动所有PlayerAgent
-            Debug.Log("[ReadySystem] Starting all PlayerAgents...");
-            StartAllPlayerAgents();
+            //Debug.Log("[ReadySystem] Starting all PlayerAgents...");
+            //StartAllPlayerAgents();
+
+            LoadGameplayScene();
         }
 
         /// <summary>
@@ -266,83 +266,33 @@ namespace Projectiles
             }
         }
 
-        private void StartAllPlayerAgents()
-        {
-            Debug.Log($"[ReadySystem] StartAllPlayerAgents called - Context: {(Context != null ? "Valid" : "NULL")}, Gameplay: {(Context?.Gameplay != null ? "Valid" : "NULL")}");
-
-            if (Context.Gameplay != null)
-            {
-                Debug.Log($"[ReadySystem] Players count: {Context.Gameplay.Players.Count}");
-
-                foreach (var kvp in Context.Gameplay.Players)
-                {
-                    var player = kvp.Value;
-                    Debug.Log($"[ReadySystem] Player {kvp.Key}: {(player != null ? player.name : "NULL")}, ActiveAgent: {(player?.ActiveAgent != null ? player.ActiveAgent.name : "NULL")}");
-
-                    if (player != null && player.ActiveAgent != null)
-                    {
-                        // 设置 gameStart
-                        player.ActiveAgent.gameStart = true;
-                        Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
-
-                        // 初始化 PlayerBody
-                        var playerBody = player.ActiveAgent.GetComponent<PlayerBody>();
-                        if (playerBody != null)
-                        {
-                            playerBody.DisableVisual();
-                            Debug.Log($"[ReadySystem] Initialized PlayerBody for {player.ActiveAgent.name}");
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Debug.Log("[ReadySystem] Context.Gameplay is null, using FindObjectsOfType fallback");
-                var agents = FindObjectsOfType<PlayerAgent>();
-                Debug.Log($"[ReadySystem] Found {agents.Length} PlayerAgents via FindObjectsOfType");
-
-                foreach (var agent in agents)
-                {
-                    // 设置 gameStart
-                    //agent.gameStart = true;
-                    //Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent: {agent.name}");
-
-                    // 初始化 PlayerBody
-                    //var playerBody = agent.GetComponent<PlayerBody>();
-                    //if (playerBody != null)
-                    //{
-                    //    playerBody.InitializeOnGameStart();
-                    //    Debug.Log($"[ReadySystem] Initialized PlayerBody for {agent.name}");
-                    //}
-                }
-            }
-        }
-
         private void LoadGameplayScene()
         {
             if (!HasStateAuthority || string.IsNullOrEmpty(gameplaySceneName)) return;
 
             Debug.Log($"[ReadySystem] Loading scene: {gameplaySceneName}, Additive: {useAdditiveSceneLoading}");
 
-            if (useAdditiveSceneLoading)
-            {
-                // 使用 Additive 模式加载（推荐）- 现有的 NetworkObject 不会被销毁
-                Runner.LoadScene(gameplaySceneName, LoadSceneMode.Additive);
+            Runner.LoadScene(gameplaySceneName, LoadSceneMode.Additive);
 
-                // 延迟卸载当前场景
-                if (unloadCurrentScene && !string.IsNullOrEmpty(lobbySceneName))
-                {
-                    StartCoroutine(UnloadLobbySceneDelayed());
-                }
-            }
-            else
-            {
-                // 普通场景加载 - 需要配合 NetworkObjectPool 的修复使用
-                Runner.LoadScene(gameplaySceneName);
-            }
+            //if (useAdditiveSceneLoading)
+            //{
+            //    // 使用 Additive 模式加载（推荐）- 现有的 NetworkObject 不会被销毁
+            //    Runner.LoadScene(gameplaySceneName, LoadSceneMode.Additive);
+
+            //    // 延迟卸载当前场景
+            //    if (unloadCurrentScene && !string.IsNullOrEmpty(lobbySceneName))
+            //    {
+            //        StartCoroutine(UnloadLobbySceneDelayed());
+            //    }
+            //}
+            //else
+            //{
+            //    // 普通场景加载 - 需要配合 NetworkObjectPool 的修复使用
+            //    Runner.LoadScene(gameplaySceneName);
+            //}
         }
 
-        private System.Collections.IEnumerator UnloadLobbySceneDelayed()
+        private IEnumerator UnloadLobbySceneDelayed()
         {
             yield return null;
             yield return new WaitForSeconds(1f);

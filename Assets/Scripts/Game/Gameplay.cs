@@ -16,6 +16,9 @@ namespace Projectiles
         [Networked, Capacity(200)]
         public NetworkDictionary<PlayerRef, Player> Players { get; }
 
+        [Networked, Capacity(200)]
+        public NetworkDictionary<PlayerRef, NetworkBool> LoadStates { get; }
+
         // PRIVATE METHODS
 
         [Header("Ready System")]
@@ -139,36 +142,70 @@ namespace Projectiles
                 Debug.Log("[Gameplay] SceneLoadDone but not gameplay scene.");
                 return;
             }
+
+            UnityEngine.SceneManagement.Scene lobby = SceneManager.GetSceneByName("Lobby");
+            if (lobby.isLoaded)
+            {
+                SceneManager.UnloadSceneAsync(lobby);
+            }
             Debug.Log("[Gameplay] SceneLoadDone called");
 
-            // 仅服务器处理重生逻辑
-            //if (!HasStateAuthority)
-            //    return;
+            Debug.Log($"[Gameplay] Game scene loaded, respawning all players. Player count: {Players.Count}");
 
-            // 检查是否是游戏场景加载完成
-            if (_readySystem != null && _readySystem.GameStarted)
+            // 刷新生成点列表
+            _spawnPointsInGame = SceneManager.GetSceneByName("Deathmatch").FindObjectsOfTypeInOrder<SpawnPointInGame>(false);
+            Debug.Log($"[Gameplay] Found {_spawnPointsInGame.Length} spawn points in game scene");
+
+            if (Runner.LocalPlayer != PlayerRef.None)
             {
-                Debug.Log($"[Gameplay] Game scene loaded, respawning all players. Player count: {Players.Count}");
+                RPC_ReportSceneLoaded(Runner.LocalPlayer);
+            }
+        }
 
-                // 刷新生成点列表
-                _spawnPointsInGame = SceneManager.GetSceneByName(_readySystem.gameplaySceneName).FindObjectsOfTypeInOrder<SpawnPointInGame>(false);
-                Debug.Log($"[Gameplay] Found {_spawnPointsInGame.Length} spawn points in game scene");
+        [Rpc(sources: RpcSources.All, targets: RpcTargets.StateAuthority)]
+        private void RPC_ReportSceneLoaded(PlayerRef playerRef)
+        {
+            if (!HasStateAuthority) return;
 
-                // 为所有已连接的玩家重新生成 Agent
-                foreach (var kvp in Players)
+            LoadStates.Set(playerRef, true);
+
+            Debug.Log($"[Gameplay] Player {playerRef} reported scene loaded.");
+
+            CheckAllPlayersLoaded();
+        }
+
+        private void CheckAllPlayersLoaded()
+        {
+            if (!HasStateAuthority) return;
+
+            foreach (var kvp in Players)
+            {
+                var playerRef = kvp.Key;
+
+                if (!LoadStates.TryGet(playerRef, out var loaded) || loaded == false)
                 {
-                    var player = kvp.Value;
-
-                    // 检查玩家是否已经有 Agent
-                    //if (player.ActiveAgent != null)
-                    //{
-                    //    Debug.Log($"[Gameplay] Player {kvp.Key} already has an agent, skipping respawn");
-                    //    continue;
-                    //}
-
-                    Debug.Log($"[Gameplay] Respawning player {kvp.Key}");
-                    SpawnPlayerAgent(player);
+                    Debug.Log($"[Gameplay] Waiting for player {playerRef}...");
+                    return;
                 }
+            }
+
+            Debug.Log("[Gameplay] All players finished loading! Respawning everyone.");
+
+            StartAllPlayerAgents();
+        }
+
+        private void StartAllPlayerAgents()
+        {
+            foreach (var kvp in Players)
+            {
+                var player = kvp.Value;
+                Debug.Log($"[Gameplay] Player {kvp.Key}: {(player != null ? player.name : "NULL")}, ActiveAgent: {(player?.ActiveAgent != null ? player.ActiveAgent.name : "NULL")}");
+
+                SpawnPlayerAgent(player);
+
+                // 设置 gameStart
+                player.ActiveAgent.gameStart = true;
+                Debug.Log($"[Gameplay] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
             }
         }
 

@@ -159,13 +159,13 @@ namespace Projectiles
             {
                 // 查找本地玩家的 PlayerAgent
                 var agents = FindObjectsByType<PlayerAgent>(FindObjectsSortMode.None);
-                Debug.Log($"[GeneralInput] FindReferences - Found {agents.Length} PlayerAgents in scene");
+                //Debug.Log($"[GeneralInput] FindReferences - Found {agents.Length} PlayerAgents in scene");
 
                 foreach (var agent in agents)
                 {
                     bool hasObject = agent.Object != null;
                     bool hasInputAuth = hasObject && agent.HasInputAuthority;
-                    Debug.Log($"[GeneralInput]   - Agent: {agent.name}, Object: {(hasObject ? "Valid" : "NULL")}, HasInputAuthority: {hasInputAuth}, gameStart: {agent.gameStart}");
+                    //Debug.Log($"[GeneralInput]   - Agent: {agent.name}, Object: {(hasObject ? "Valid" : "NULL")}, HasInputAuthority: {hasInputAuth}, gameStart: {agent.gameStart}");
 
                     if (hasObject && hasInputAuth)
                     {
@@ -195,7 +195,7 @@ namespace Projectiles
             FindReferences();
 
             // 检查游戏是否已开始
-            bool gameStarted = _agent != null && _agent.gameStart;
+            bool gameStarted = _agent != null && _agent.IsGameStartedSafe;
 
             Debug.Log($"[GeneralInput] SetLockedState - _agent: {(_agent != null ? _agent.name : "NULL")}, gameStarted: {gameStarted}");
 
