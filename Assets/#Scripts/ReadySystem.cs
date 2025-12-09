@@ -8,7 +8,6 @@ namespace Projectiles
 {
     /// <summary>
     /// 准备系统 - 处理玩家准备状态的网络同步
-    /// 【修复版本】支持场景切换时保持玩家对象不被销毁
     /// </summary>
     public class ReadySystem : ContextBehaviour
     {
@@ -200,10 +199,6 @@ namespace Projectiles
             Debug.Log("[ReadySystem] Marking players as persistent...");
             MarkPlayersAsPersistent();
 
-            // 启动所有PlayerAgent
-            Debug.Log("[ReadySystem] Starting all PlayerAgents...");
-            StartAllPlayerAgents();
-
             // 刷新并锁定光标（确保输入正常工作）
             Debug.Log("[ReadySystem] Refreshing input after game start...");
             RefreshInputAfterGameStart();
@@ -212,16 +207,11 @@ namespace Projectiles
             Debug.Log("[ReadySystem] Invoking OnGameStarted event...");
             OnGameStarted?.Invoke();
 
-            // 加载游戏场景（仅服务器执行）
-            if (HasStateAuthority)
-            {
-                Debug.Log("[ReadySystem] HasStateAuthority=true, loading gameplay scene...");
-                LoadGameplayScene();
-            }
-            else
-            {
-                Debug.Log("[ReadySystem] HasStateAuthority=false, waiting for scene load from server");
-            }
+            LoadGameplayScene();
+
+            // 启动所有PlayerAgent
+            Debug.Log("[ReadySystem] Starting all PlayerAgents...");
+            StartAllPlayerAgents();
         }
 
         /// <summary>
@@ -292,8 +282,8 @@ namespace Projectiles
                     if (player != null && player.ActiveAgent != null)
                     {
                         // 设置 gameStart
-                        //player.ActiveAgent.gameStart = true;
-                        //Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
+                        player.ActiveAgent.gameStart = true;
+                        Debug.Log($"[ReadySystem] Set gameStart=true for PlayerAgent {player.ActiveAgent.name}");
 
                         // 初始化 PlayerBody
                         var playerBody = player.ActiveAgent.GetComponent<PlayerBody>();

@@ -7,17 +7,20 @@
     using Projectiles;
     using TMPro;
     using UnityEngine;
+    using UnityEngine.SceneManagement;
     using UnityEngine.UI;
 
     /// <summary>
     /// 大厅UI系统 - 替代FusionBootstrapDebugGUI
     /// 功能：输入昵称、创建房间、查看房间列表、加入房间、刷新列表
     /// 
-    /// 【修复版本 v2】添加调试日志，修复点击房间无法加入的问题
+    /// 【修复版本 v3】添加离开房间功能
     /// </summary>
     [RequireComponent(typeof(FusionBootstrap))]
     public class FusionLobbyUI : MonoBehaviour, INetworkRunnerCallbacks
     {
+        public string lobbySceneName;
+
         [Header("=== UI References ===")]
         [SerializeField] private GameObject lobbyPanel;
 
@@ -47,6 +50,7 @@
         // Private fields
         private FusionBootstrap _bootstrap;
         private NetworkRunner _lobbyRunner;
+        private NetworkRunner _gameRunner; // 游戏中的Runner
         private List<SessionInfo> _sessionList = new List<SessionInfo>();
         private List<GameObject> _roomItemInstances = new List<GameObject>();
         private float _lastRefreshTime;
@@ -87,6 +91,10 @@
             loadingIndicator.alpha = 0f;
             ShowLobby();
             ConnectToLobby();
+            if (!SceneManager.GetSceneByName(lobbySceneName).isLoaded)
+            {
+                SceneManager.LoadScene(lobbySceneName, LoadSceneMode.Additive);
+            }
         }
 
         private void Update()
@@ -101,6 +109,7 @@
         private void OnDestroy()
         {
             DisconnectFromLobby();
+            LeaveGame();
         }
 
         #endregion
@@ -467,6 +476,41 @@
             }
 
             ShowLoading(true);
+        }
+
+        /// <summary>
+        /// 离开当前游戏房间，返回大厅
+        /// </summary>
+        public void LeaveRoom()
+        {
+            DebugLog("LeaveRoom called");
+
+            LeaveGame();
+
+            // 重置状态
+            _isJoiningGame = false;
+
+            Initialized();
+        }
+
+        /// <summary>
+        /// 关闭游戏Runner
+        /// </summary>
+        private void LeaveGame()
+        {
+            // 查找当前活跃的游戏Runner
+            var runners = FindObjectsOfType<NetworkRunner>();
+            foreach (var runner in runners)
+            {
+                // 排除大厅Runner
+                if (runner != _lobbyRunner && runner.IsRunning)
+                {
+                    DebugLog($"Shutting down game runner: {runner.name}");
+                    runner.Shutdown();
+                }
+            }
+
+            _gameRunner = null;
         }
 
         #endregion

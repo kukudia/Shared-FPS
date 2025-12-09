@@ -10,6 +10,7 @@ namespace Projectiles
     /// 准备系统UI
     /// - 房主看到: "开始游戏 (X/Y)" 按钮，X是准备人数，Y是总玩家数
     /// - 其他玩家看到: "准备" / "取消准备" 按钮
+    /// - 所有玩家可以点击"离开房间"按钮返回大厅
     /// </summary>
     public class ReadyUI : MonoBehaviour
     {
@@ -18,6 +19,7 @@ namespace Projectiles
         [Header("UI References")]
         [SerializeField] private CanvasGroup readyPanel;
         [SerializeField] private Button readyButton;
+        [SerializeField] private Button leaveButton;
         [SerializeField] private TMP_Text buttonText;
         [SerializeField] private TMP_Text statusText;
 
@@ -43,10 +45,21 @@ namespace Projectiles
         private void Start()
         {
             readyPanel.alpha = 0f;
+
             if (readyButton != null)
             {
-                readyButton.onClick.AddListener(OnButtonClicked);
+                readyButton.onClick.AddListener(OnReadyButtonClicked);
                 _buttonImage = readyButton.GetComponent<Image>();
+            }
+
+            if (leaveButton != null)
+            {
+                leaveButton.onClick.AddListener(OnLeaveButtonClicked);
+                Debug.Log("[ReadyUI] Leave button listener added");
+            }
+            else
+            {
+                Debug.LogWarning("[ReadyUI] Leave button not assigned!");
             }
 
             // 尝试查找ReadySystem
@@ -99,14 +112,14 @@ namespace Projectiles
                 _readySystem.OnGameStarted += OnGameStarted;
 
                 if (readyPanel != null)
-                    readyPanel.SetActive(true);
+                    readyPanel.gameObject.SetActive(true);
 
                 UpdateUI();
                 Debug.Log("[ReadyUI] Initialized successfully");
             }
         }
 
-        private void OnButtonClicked()
+        private void OnReadyButtonClicked()
         {
             if (_readySystem == null) return;
 
@@ -122,6 +135,27 @@ namespace Projectiles
             {
                 // 其他玩家切换准备状态
                 _readySystem.ToggleReady();
+            }
+        }
+
+        private void OnLeaveButtonClicked()
+        {
+            Debug.Log("[ReadyUI] Leave button clicked");
+
+            if (lobbyUI != null)
+            {
+                // 隐藏准备面板
+                if (readyPanel != null)
+                {
+                    SetPanelVisualization(readyPanel, 0f, false);
+                }
+
+                // 调用LobbyUI的离开房间方法
+                lobbyUI.LeaveRoom();
+            }
+            else
+            {
+                Debug.LogError("[ReadyUI] LobbyUI reference is missing! Please assign it in the Inspector.");
             }
         }
 
@@ -169,7 +203,6 @@ namespace Projectiles
                 if (isHost)
                 {
                     // 房主只有在所有人准备好后才能点击
-                    //readyButton.interactable = allReady && playerCount > 1;
                     readyButton.interactable = allReady;
                 }
                 else
@@ -198,8 +231,12 @@ namespace Projectiles
                 }
             }
 
-            lobbyUI.ShowLoading(false);
-            SetPanelVisualization(readyPanel, 255f, true);
+            if (lobbyUI != null)
+            {
+                lobbyUI.ShowLoading(false);
+            }
+
+            SetPanelVisualization(readyPanel, 1f, true);
         }
 
         private void OnGameStarted()
@@ -207,7 +244,7 @@ namespace Projectiles
             // 游戏开始后隐藏准备界面
             if (readyPanel != null)
             {
-                readyPanel.SetActive(false);
+                readyPanel.gameObject.SetActive(false);
             }
 
             Debug.Log("[ReadyUI] Game started, hiding ready panel");
@@ -242,6 +279,8 @@ namespace Projectiles
         /// </summary>
         private void SetPanelVisualization(CanvasGroup group, float targetAlpha, bool load)
         {
+            if (group == null) return;
+
             DOTween.Kill(group);
 
             if (load)

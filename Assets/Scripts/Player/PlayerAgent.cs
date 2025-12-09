@@ -43,6 +43,7 @@ namespace Projectiles
         [SerializeField] public float _airDeceleration = 1.3f;
 
         public bool gameStart = false;
+        public bool enableMovement = false;
 
         [Networked]
         private Vector3 _moveVelocity { get; set; }
@@ -60,6 +61,8 @@ namespace Projectiles
             // This saves network traffic by not synchronizing networked properties to other clients except local player.
             ReplicateToAll(false);
             ReplicateTo(Object.InputAuthority, true);
+
+            enableMovement = gameStart;
         }
 
         public override void Despawned(NetworkRunner runner, bool hasState)
@@ -69,7 +72,7 @@ namespace Projectiles
 
         public override void FixedUpdateNetwork()
         {
-            if (!gameStart) return;
+            if (!gameStart || !enableMovement) return;
 
             if (Owner != null && Health.IsAlive == true)
             {

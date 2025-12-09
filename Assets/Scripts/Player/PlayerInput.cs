@@ -98,7 +98,8 @@ namespace Projectiles
         void IBeforeUpdate.BeforeUpdate()
         {
             // 每秒输出一次调试信息
-            bool shouldLog = Time.time - _lastDebugTime > 1f;
+
+            bool shouldLog = false;
 
             if (HasInputAuthority == false)
             {
@@ -271,12 +272,10 @@ namespace Projectiles
             {
                 Debug.Log($"[PlayerInput] Scene loaded: {scene.name}, re-initializing input...");
 
-                Context.Gameplay.SpawnPlayerAgentFromReady(_agent.Owner);
+                //Context.Gameplay.SpawnPlayerAgentFromReady(_agent.Owner);
 
                 // 延迟一帧执行，确保新场景的对象都已初始化
                 StartCoroutine(ReinitializeInputDelayed());
-
-                _agent.gameStart = true;
             }
         }
 

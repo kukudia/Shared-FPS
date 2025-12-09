@@ -7,7 +7,7 @@ namespace Projectiles
 {
     /// <summary>
     /// Represents the actual gameplay loop. Handles PlayerAgent spawning and despawning for each Player that joins gameplay.
-    /// 【已修改】整合了准备系统
+    /// 【已修改】整合了准备系统 + 场景加载后自动重生所有玩家
     /// </summary>
     public class Gameplay : ContextBehaviour
     {
@@ -75,7 +75,7 @@ namespace Projectiles
             // Register to context
             Context.Gameplay = this;
 
-            // 生成准备系统（仅服务器）
+            // 生成准备系统(仅服务器)
             if (HasStateAuthority && readySystemPrefab != null)
             {
                 _readySystem = Runner.Spawn(readySystemPrefab);
@@ -122,6 +122,56 @@ namespace Projectiles
             }
         }
 
+        private void OnEnable()
+        {
+            SceneManager.sceneLoaded += SceneLoadDone;
+        }
+
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= SceneLoadDone;
+        }
+
+        public void SceneLoadDone(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
+        {
+            if (scene != SceneManager.GetSceneByName(Context.ReadySystem.gameplaySceneName))
+            {
+                Debug.Log("[Gameplay] SceneLoadDone but not gameplay scene.");
+                return;
+            }
+            Debug.Log("[Gameplay] SceneLoadDone called");
+
+            // 仅服务器处理重生逻辑
+            //if (!HasStateAuthority)
+            //    return;
+
+            // 检查是否是游戏场景加载完成
+            if (_readySystem != null && _readySystem.GameStarted)
+            {
+                Debug.Log($"[Gameplay] Game scene loaded, respawning all players. Player count: {Players.Count}");
+
+                // 刷新生成点列表
+                _spawnPointsInGame = SceneManager.GetSceneByName(_readySystem.gameplaySceneName).FindObjectsOfTypeInOrder<SpawnPointInGame>(false);
+                Debug.Log($"[Gameplay] Found {_spawnPointsInGame.Length} spawn points in game scene");
+
+                // 为所有已连接的玩家重新生成 Agent
+                foreach (var kvp in Players)
+                {
+                    var player = kvp.Value;
+
+                    // 检查玩家是否已经有 Agent
+                    //if (player.ActiveAgent != null)
+                    //{
+                    //    Debug.Log($"[Gameplay] Player {kvp.Key} already has an agent, skipping respawn");
+                    //    continue;
+                    //}
+
+                    Debug.Log($"[Gameplay] Respawning player {kvp.Key}");
+                    SpawnPlayerAgent(player);
+                }
+            }
+        }
+
         // PROTECTED METHODS
 
         protected virtual void OnPlayerJoined(Player player)
@@ -143,13 +193,14 @@ namespace Projectiles
         {
             agent.Health.SetImmortality(3f);
 
-            // 默认gameStart为false，等待准备系统启动
+            // 默认gameStart为false,等待准备系统启动
             agent.gameStart = false;
 
-            // 如果游戏已经开始，直接设置为true
+            // 如果游戏已经开始,直接设置为true
             if (Context.ReadySystem != null && Context.ReadySystem.GameStarted)
             {
                 agent.gameStart = true;
+                Debug.Log($"[Gameplay] Agent spawned with gameStart=true for player {agent.Object.InputAuthority}");
             }
         }
 
@@ -215,7 +266,7 @@ namespace Projectiles
 
         private PlayerAgent SpawnAgent(PlayerRef inputAuthority, PlayerAgent agentPrefab)
         {
-            if (Context.ReadySystem != null && Context.ReadySystem.GameStarted)
+            if (Context.ReadySystem.GameStarted)
             {
                 if (_spawnPointsInGame.Length == 0)
                 {
@@ -236,6 +287,7 @@ namespace Projectiles
                 _lastSpawnPoint = (_lastSpawnPoint + 1) % _spawnPoints.Length;
                 var spawnPoint = _spawnPoints[_lastSpawnPoint].transform;
                 var agent = Runner.Spawn(agentPrefab, spawnPoint.position, spawnPoint.rotation, inputAuthority);
+                Debug.Log($"[Gameplay] {agent} spawn at {spawnPoint}");
                 return agent;
             }
         }
