@@ -27,7 +27,7 @@ namespace Projectiles
 
     /// <summary>
     /// PlayerInput handles accumulating player input from Unity and passes the accumulated input to Fusion.
-    /// ¡¾ĞŞ¸´°æ±¾¡¿Ö§³Ö³¡¾°ÇĞ»»ºóÖØĞÂ³õÊ¼»¯ÊäÈëÏµÍ³
+    /// ã€ä¿®å¤ç‰ˆæœ¬ã€‘æ”¯æŒåœºæ™¯åˆ‡æ¢åé‡æ–°åˆå§‹åŒ–è¾“å…¥ç³»ç»Ÿ
     /// </summary>
     public sealed class PlayerInput : ContextBehaviour, IBeforeUpdate, IAfterTick
     {
@@ -50,6 +50,7 @@ namespace Projectiles
         private PlayerAgent _agent;
         private bool _isInputRegistered;
         private NetworkEvents _registeredNetworkEvents;
+        private bool _hasCursorLockRequest;
 
         // NetworkBehaviour INTERFACE
 
@@ -77,13 +78,13 @@ namespace Projectiles
             UnregisterInput();
         }
 
-        // Ã¿Ö¡¼ì²é²¢È·±£ÊäÈëÒÑ×¢²á£¨´¦Àí³¡¾°ÇĞ»»µÄÇé¿ö£©
+        // æ¯å¸§æ£€æŸ¥å¹¶ç¡®ä¿è¾“å…¥å·²æ³¨å†Œï¼ˆå¤„ç†åœºæ™¯åˆ‡æ¢çš„æƒ…å†µï¼‰
         public override void FixedUpdateNetwork()
         {
             if (HasInputAuthority == false)
                 return;
 
-            // ¼ì²éÊäÈëÊÇ·ñĞèÒªÖØĞÂ×¢²á
+            // æ£€æŸ¥è¾“å…¥æ˜¯å¦éœ€è¦é‡æ–°æ³¨å†Œ
             if (!_isInputRegistered || _registeredNetworkEvents == null)
             {
                 Debug.Log($"[PlayerInput] FixedUpdateNetwork - Input needs re-registration. _isInputRegistered={_isInputRegistered}, _registeredNetworkEvents={((_registeredNetworkEvents != null) ? "Valid" : "NULL")}");
@@ -97,7 +98,7 @@ namespace Projectiles
 
         void IBeforeUpdate.BeforeUpdate()
         {
-            // Ã¿ÃëÊä³öÒ»´Îµ÷ÊÔĞÅÏ¢
+            // æ¯ç§’è¾“å‡ºä¸€æ¬¡è°ƒè¯•ä¿¡æ¯
 
             bool shouldLog = false;
 
@@ -111,14 +112,14 @@ namespace Projectiles
                 return;
             }
 
-            // È·±£ÊäÈëÒÑ×¢²á
+            // ç¡®ä¿è¾“å…¥å·²æ³¨å†Œ
             if (!_isInputRegistered)
             {
                 Debug.Log($"[PlayerInput] BeforeUpdate - Input not registered, registering now...");
                 RegisterInput();
             }
 
-            // ¼ì²éÓÎÏ·ÊÇ·ñÒÑ¿ªÊ¼
+            // æ£€æŸ¥æ¸¸æˆæ˜¯å¦å·²å¼€å§‹
             if (_agent == null)
             {
                 if (shouldLog)
@@ -142,7 +143,7 @@ namespace Projectiles
             }
 
             // Input is tracked only if the cursor is locked and runner should provide input
-            // Ê¹ÓÃ°²È«µÄ·½Ê½»ñÈ¡ GeneralInput
+            // ä½¿ç”¨å®‰å…¨çš„æ–¹å¼è·å– GeneralInput
             var generalInput = GetGeneralInput();
 
             if (shouldLog)
@@ -253,7 +254,7 @@ namespace Projectiles
 
         private void OnEnable()
         {
-            // ¼àÌı³¡¾°¼ÓÔØÍê³ÉÊÂ¼ş
+            // ç›‘å¬åœºæ™¯åŠ è½½å®Œæˆäº‹ä»¶
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
@@ -267,29 +268,28 @@ namespace Projectiles
 
         private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
         {
-            // ³¡¾°¼ÓÔØºóÖØĞÂ³õÊ¼»¯
+            // åœºæ™¯åŠ è½½åé‡æ–°åˆå§‹åŒ–
             if (HasInputAuthority)
             {
                 Debug.Log($"[PlayerInput] Scene loaded: {scene.name}, re-initializing input...");
 
                 //Context.Gameplay.SpawnPlayerAgentFromReady(_agent.Owner);
 
-                // ÑÓ³ÙÒ»Ö¡Ö´ĞĞ£¬È·±£ĞÂ³¡¾°µÄ¶ÔÏó¶¼ÒÑ³õÊ¼»¯
+                // å»¶è¿Ÿä¸€å¸§æ‰§è¡Œï¼Œç¡®ä¿æ–°åœºæ™¯çš„å¯¹è±¡éƒ½å·²åˆå§‹åŒ–
                 StartCoroutine(ReinitializeInputDelayed());
             }
         }
 
         private System.Collections.IEnumerator ReinitializeInputDelayed()
         {
-            yield return null; // µÈ´ıÒ»Ö¡
+            yield return null; // ç­‰å¾…ä¸€å¸§
 
             RegisterInput();
 
-            // ÖØĞÂÇëÇóËø¶¨¹â±ê
-            var generalInput = GetGeneralInput();
-            if (generalInput != null && _agent.gameStart)
+            // é‡æ–°è¯·æ±‚é”å®šå…‰æ ‡
+            if (_agent.gameStart)
             {
-                generalInput.RequestCursorLock();
+                RequestCursorLock();
                 Debug.Log("[PlayerInput] Re-requested cursor lock after scene load");
             }
         }
@@ -304,7 +304,7 @@ namespace Projectiles
                 return;
             }
 
-            // ÏÈÈ¡ÏûÖ®Ç°µÄ×¢²á
+            // å…ˆå–æ¶ˆä¹‹å‰çš„æ³¨å†Œ
             UnregisterInput();
 
             var networkEvents = Runner.GetComponent<NetworkEvents>();
@@ -317,15 +317,7 @@ namespace Projectiles
                 _isInputRegistered = true;
                 Debug.Log($"[PlayerInput] Input registered successfully to NetworkEvents on {Runner.name}");
 
-                // ÇëÇóËø¶¨¹â±ê
-                var generalInput = GetGeneralInput();
-                Debug.Log($"[PlayerInput] GeneralInput for cursor lock: {(generalInput != null ? "Found" : "NULL")}");
-
-                if (generalInput != null)
-                {
-                    generalInput.RequestCursorLock();
-                    Debug.Log("[PlayerInput] Cursor lock requested");
-                }
+                RequestCursorLock();
             }
             else
             {
@@ -340,21 +332,53 @@ namespace Projectiles
                 _registeredNetworkEvents.OnInput.RemoveListener(OnInput);
                 _registeredNetworkEvents = null;
             }
+
+            ReleaseCursorLock();
             _isInputRegistered = false;
         }
 
+        private void RequestCursorLock()
+        {
+            if (_hasCursorLockRequest)
+                return;
+
+            var generalInput = GetGeneralInput();
+            Debug.Log($"[PlayerInput] GeneralInput for cursor lock: {(generalInput != null ? "Found" : "NULL")}");
+
+            if (generalInput == null)
+                return;
+
+            generalInput.RequestCursorLock();
+            _hasCursorLockRequest = true;
+            Debug.Log("[PlayerInput] Cursor lock requested");
+        }
+
+        private void ReleaseCursorLock()
+        {
+            if (!_hasCursorLockRequest)
+                return;
+
+            var generalInput = GetGeneralInput();
+            if (generalInput != null)
+            {
+                generalInput.RequestCursorRelease();
+            }
+
+            _hasCursorLockRequest = false;
+        }
+
         /// <summary>
-        /// °²È«»ñÈ¡ GeneralInput£¨´¦Àí Context ¿ÉÄÜÎª null µÄÇé¿ö£©
+        /// å®‰å…¨è·å– GeneralInputï¼ˆå¤„ç† Context å¯èƒ½ä¸º null çš„æƒ…å†µï¼‰
         /// </summary>
         private GeneralInput GetGeneralInput()
         {
-            // ÓÅÏÈ´Ó Context »ñÈ¡
+            // ä¼˜å…ˆä» Context è·å–
             if (Context != null && Context.GeneralInput != null)
             {
                 return Context.GeneralInput;
             }
 
-            // ±¸ÓÃ·½°¸£ºÖ±½Ó²éÕÒ
+            // å¤‡ç”¨æ–¹æ¡ˆï¼šç›´æ¥æŸ¥æ‰¾
             return FindFirstObjectByType<GeneralInput>();
         }
 
@@ -369,7 +393,7 @@ namespace Projectiles
                 return;
             }
 
-            // µ÷ÊÔ£ºÏÔÊ¾ÊäÈëÄÚÈİ
+            // è°ƒè¯•ï¼šæ˜¾ç¤ºè¾“å…¥å†…å®¹
             if (_accumulatedInput.MoveDirection != Vector2.zero || _accumulatedInput.LookRotationDelta != Vector2.zero)
             {
                 // Debug.Log($"[PlayerInput] OnInput - Setting input: Move={_accumulatedInput.MoveDirection}, Look={_accumulatedInput.LookRotationDelta}");

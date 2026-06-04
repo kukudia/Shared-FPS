@@ -14,7 +14,7 @@ namespace Projectiles
     {
         // PUBLIC MEMBERS
 
-        public bool IsLocked => Cursor.lockState == CursorLockMode.Locked;
+        public bool IsLocked => Cursor.lockState == CursorLockMode.Locked && Cursor.visible == false;
 
         // PRIVATE MEMBERS
         private UIScreenEffects _uIScreenEffects;
@@ -123,7 +123,8 @@ namespace Projectiles
             // Enter key is used for locking/unlocking cursor in game view
             if (keyboard.enterKey.wasPressedThisFrame || keyboard.numpadEnterKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame)
             {
-                SetLockedState(Cursor.lockState != CursorLockMode.Locked);
+                bool shouldLock = Cursor.lockState != CursorLockMode.Locked || Cursor.visible;
+                SetLockedState(shouldLock);
                 _lastSingleInputChange = Time.frameCount;
             }
 

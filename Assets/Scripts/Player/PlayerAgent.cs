@@ -13,6 +13,7 @@ namespace Projectiles
     public class PlayerAgent : ContextBehaviour
     {
         private float lastRotationY;
+        private bool _cursorLockedForStartedGame;
 
         [Networked]
         public Player Owner { get; set; }
@@ -74,9 +75,9 @@ namespace Projectiles
             ReplicateToAll(false);
             ReplicateTo(Object.InputAuthority, true);
 
-            if (gameStart)
+            if (gameStart && HasInputAuthority)
             {
-                Context.GeneralInput.ForceLockCursor();
+                LockCursorForStartedGame();
             }
         }
 
@@ -137,7 +138,16 @@ namespace Projectiles
 
         protected void LateUpdate()
         {
-            if (!gameStart) return;
+            if (!gameStart)
+            {
+                _cursorLockedForStartedGame = false;
+                return;
+            }
+
+            if (HasInputAuthority)
+            {
+                LockCursorForStartedGame();
+            }
 
             if (HasInputAuthority == true && Owner != null && Health.IsAlive == true)
             {
@@ -180,6 +190,19 @@ namespace Projectiles
         }
 
         // PRIVATE METHODS
+
+        private void LockCursorForStartedGame()
+        {
+            if (_cursorLockedForStartedGame)
+                return;
+
+            if (Context != null && Context.GeneralInput != null)
+            {
+                Context.GeneralInput.ForceLockCursor();
+            }
+
+            _cursorLockedForStartedGame = Cursor.lockState == CursorLockMode.Locked && Cursor.visible == false;
+        }
 
         private void ProcessMovementInput()
         {
