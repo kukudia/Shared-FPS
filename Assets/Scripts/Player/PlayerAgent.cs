@@ -1,7 +1,6 @@
 ﻿using Fusion;
 using UnityEngine;
 using Fusion.Addons.SimpleKCC;
-using WebSocketSharp;
 
 namespace Projectiles
 {
@@ -67,7 +66,7 @@ namespace Projectiles
 
         public override void Spawned()
         {
-            name = FusionLobbyUI.PlayerNickname.IsNullOrEmpty() ? Object.InputAuthority.ToString() : FusionLobbyUI.PlayerNickname;
+            name = string.IsNullOrEmpty(FusionLobbyUI.PlayerNickname) ? Object.InputAuthority.ToString() : FusionLobbyUI.PlayerNickname;
             Debug.Log($"[PlayerAgent] Player name: {name}");
 
             // Only local player needs networked properties (move velocity).
